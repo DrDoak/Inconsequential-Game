@@ -1,0 +1,1548 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"v",
+				"v"
+			],
+			[
+				"for",
+				"forp\tfor k,v in pairs()"
+			],
+			[
+				"pent",
+				"penetration"
+			],
+			[
+				"wrap",
+				"wrapTargetClear"
+			],
+			[
+				"dir",
+				"dir"
+			],
+			[
+				"newvl",
+				"newVelY"
+			],
+			[
+				"lastTar",
+				"lastTargetVel"
+			],
+			[
+				"lastt",
+				"lastTargetVel"
+			],
+			[
+				"critpe",
+				"critPenaltyMovement"
+			],
+			[
+				"critpen",
+				"critPenaltyAim"
+			],
+			[
+				"pne",
+				"penaltyAim"
+			],
+			[
+				"pen",
+				"penaltyStabilization"
+			],
+			[
+				"pena",
+				"penaltyMovement"
+			],
+			[
+				"off",
+				"offsetY"
+			],
+			[
+				"x",
+				"x"
+			],
+			[
+				"b",
+				"boundQuads"
+			],
+			[
+				"spe",
+				"speedModY"
+			],
+			[
+				"speed",
+				"speedModX"
+			],
+			[
+				"fo",
+				"fori\tfor i,v in ipairs()"
+			],
+			[
+				"modSpe",
+				"modSpeedX"
+			],
+			[
+				"att",
+				"attachMod"
+			],
+			[
+				"act",
+				"actionsToExecute"
+			],
+			[
+				"Ai",
+				"AIQuestionAnswer"
+			],
+			[
+				"char",
+				"charName"
+			],
+			[
+				"know",
+				"knowAboutCharacter"
+			],
+			[
+				"chara",
+				"characterName"
+			],
+			[
+				"form",
+				"formulateInfo"
+			],
+			[
+				"respo",
+				"respondInfo"
+			],
+			[
+				"inita",
+				"initiatedConversation"
+			],
+			[
+				"re",
+				"receivingConversation"
+			],
+			[
+				"oncl",
+				"onCloseArgs"
+			],
+			[
+				"ch",
+				"characterName"
+			],
+			[
+				"aipi",
+				"aipiece"
+			],
+			[
+				"respondt",
+				"respondToEvent"
+			],
+			[
+				"dist",
+				"distance"
+			],
+			[
+				"calcul",
+				"calculateTag"
+			],
+			[
+				"dep",
+				"dependencyPath"
+			],
+			[
+				"curre",
+				"currentRoom"
+			],
+			[
+				"close",
+				"closestToGoalDist"
+			],
+			[
+				"des",
+				"destinationY"
+			],
+			[
+				"dest",
+				"destinationX"
+			],
+			[
+				"di",
+				"distance"
+			],
+			[
+				"cur",
+				"curRoom"
+			],
+			[
+				"setr",
+				"setRoomChangeOnColllide"
+			],
+			[
+				"newroo",
+				"newRoomName"
+			],
+			[
+				"newr",
+				"newRoomName"
+			],
+			[
+				"no",
+				"nodeList"
+			],
+			[
+				"destinat",
+				"destinationX"
+			],
+			[
+				"spr",
+				"sprites"
+			],
+			[
+				"ismo",
+				"isMoving"
+			],
+			[
+				"ismov",
+				"isMovingY"
+			],
+			[
+				"ism",
+				"isMoving"
+			],
+			[
+				"speedMod",
+				"speedModY"
+			],
+			[
+				"fire",
+				"fire"
+			],
+			[
+				"Obja",
+				"ObjBaseUnit"
+			],
+			[
+				"ac",
+				"ActiveObj"
+			],
+			[
+				"proce",
+				"processJumpThru"
+			],
+			[
+				"count",
+				"count"
+			],
+			[
+				"up",
+				"up"
+			],
+			[
+				"checks",
+				"checkSide"
+			],
+			[
+				"Health",
+				"health"
+			],
+			[
+				"value",
+				"value"
+			],
+			[
+				"startX",
+				"startX"
+			],
+			[
+				"addPr",
+				"addPredefRoom"
+			],
+			[
+				"lig",
+				"light"
+			],
+			[
+				"fx",
+				"fx"
+			],
+			[
+				"p",
+				"properties"
+			],
+			[
+				"platf",
+				"platformWidth"
+			],
+			[
+				"or",
+				"orange_building"
+			],
+			[
+				"exit",
+				"exit"
+			],
+			[
+				"plat",
+				"platformWidth"
+			],
+			[
+				"pla",
+				"platformWidth"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "modules/ModControllable.lua",
+			"settings":
+			{
+				"buffer_size": 3900,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "objects/ObjChar.lua",
+			"settings":
+			{
+				"buffer_size": 2978,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "modules/ModCharacter.lua",
+			"settings":
+			{
+				"buffer_size": 2894,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "modules/ModCharacterDetector.lua",
+			"settings":
+			{
+				"buffer_size": 4345,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "extra.lua",
+			"settings":
+			{
+				"buffer_size": 4168,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 180.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/LuoLei Zhao/Inconsequential-Game"
+	],
+	"file_history":
+	[
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/MGame.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/util.lua",
+		"/C/acl100-smp.64/startup.cl",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/assets/spr/scripts/SprHatHelmet.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/assets/spr/scripts/SprCrate.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModDrawable.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModPhysics.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/ObjIntHitbox.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModActive.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModPartEmitter.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/ObjCrate.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/ObjBaseUnit.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/ObjCamera.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/assets/spr/scripts/SprHeadUniform.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/libs/serpent.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/libs/ser.lua",
+		"/C/qrg/fire/v3/tools/344-utils.lsp",
+		"/C/qrg/planb/mt-fact-set.lsp",
+		"/C/qrg/planb/sinference.lsp",
+		"/C/qrg/planb/all-specpred-inf.lsp",
+		"/C/qrg/fire/v3/ask.lsp",
+		"/C/Users/LuoLei Zhao/NLPGoldenGlobes/NLPGoldenGlobes/nltkTest.py",
+		"/C/qrg/HW4.lisp",
+		"/C/qrg/planb/docs/planb.html",
+		"/C/qrg/bps/ltre/rules/empty.lsp",
+		"/C/qrg/bps/ltre/crarules.lsp",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModRoomChanger.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/ObjRoomChanger.lua",
+		"/C/qrg/bps/ltre/crarith.lsp",
+		"/C/qrg/bps/ltre/marxdata.lsp",
+		"/C/qrg/bps/ltre/linter.lsp",
+		"/C/qrg/bps/ltre/ldata.lsp",
+		"/C/qrg/bps/ltre/ltms.lsp",
+		"/C/qrg/bps-init.lsp",
+		"/C/Users/LuoLei Zhao/GameDevelopmentStudio/.gitignore",
+		"/C/Users/LuoLei Zhao/GameDevelopmentStudio/Assets/Script/Controller2D.cs",
+		"/C/qrg/bps/ltre/rules/crarules.lsp",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/extra.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModSpeedZone.lua",
+		"/C/qrg/bps/ltre/ltre.lsp",
+		"/C/qrg/bps/ltre/marx.lsp",
+		"/C/qrg/bps/ftre/crarules.lsp",
+		"/C/qrg/bps/ftre/crarith.lsp",
+		"/C/qrg/bps/ftre/problem-5-17a.lsp",
+		"/C/qrg/bps/ftre/myfnd-ex.lsp",
+		"/C/qrg/bps/ftre/ftre.lsp",
+		"/C/Users/defaultuser0/omegalib/firefly/modules/firefly/firefly_config_min_readsnap.py",
+		"/C/qrg/bps/jtre/jtms/homework.lsp",
+		"/C/Users/LuoLei Zhao/NLPGoldenGlobes/data/goldenglobes.tab",
+		"/C/Users/LuoLei Zhao/NLPGoldenGlobes/NLPGoldenGlobes/tweet.py",
+		"/C/Users/LuoLei Zhao/NLPGoldenGlobes/tweet.py",
+		"/C/Users/LuoLei Zhao/NLPGoldenGlobes/parser.py",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/ai/AISurvival.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/ai/info/InfoPistols.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModCharacter.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/KEY",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModControllable.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModTargetEqp.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/EqpHandgun.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/ai/AIHumanRecognition.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModCharacterDetector.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/ai/AIPraiseCondemn.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/ai/AIQuestionAnswer.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/ai/AITemplate.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/ai/info/InfoAlethianAlliance.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/ai/AIBasicSpeech.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/assets/ai/AIAlliance.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/xl/Lights.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/ObjBaseUnitTD.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/ObjBase.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModLineFX.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/FXShot.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/ObjTestNPC.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/assets/npcs/guard.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModEquippable.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModInventory.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/assets/spr/scripts/SprBodyUniform.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModPathFinder.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModTargeter.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/assets/spr/scripts/SprTorchEqp.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/assets/spr/scripts/SprHandgun.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/Error",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/SettingManager.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/xl/Inventory.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModNPC.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/ObjChar.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/ObjWeapon.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/assets/spr/scripts/SprHeadPeridot.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/ObjWorldManager.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/mixin/TextInterface.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/mixin/DialogActive.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/xl/TextBox.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/xl/TextEngine.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/xl/Text.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/assets/spr/scripts/SprLegBoots.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/ObjTorch.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/mixin/EquipIcon.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/xl/SpritePiece.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModFollow.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/FXReticle.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModReticle.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/assets/spr/scripts/SprReticle.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/ObjSlope.lua",
+		"/C/Users/LuoLei Zhao/AppData/Local/Temp/plt-sendurl-contents-file-14836004601483600460470.html",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModDrawableTD.lua",
+		"/C/Users/LuoLei Zhao/leetlib/modules/ModDrawable.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModTDObj.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/ObjCrate3D.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/ObjFence.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/ObjTestInt.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/xl/Scene.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/ObjGenericObj.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/libs/Global.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/ObjEnemy.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/assets/ai/AIOrder.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/assets/ai/AIWeapons.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModInteractor.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/xl/Sprite.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/assets/spr/scripts/SprHeadGeneric.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/ai/AITrust.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/assets/ai/AIOrderTresspass.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/assets/ai/AIOrderSilence.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/ObjAttackHitbox.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModWooden.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/assets/rooms/initial_room.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/xl/BasicMenu.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/state/MainMenu.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/assets/spr/scripts/SprLegPeridot.lua"
+	],
+	"find":
+	{
+		"height": 50.0
+	},
+	"find_in_files":
+	{
+		"height": 138.0,
+		"where_history":
+		[
+			"",
+			"EqpHook",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"animate",
+			"ModDrawableTD",
+			"ModControllableTD",
+			"ObjDebugCamera",
+			"ObjBaseUnitTD",
+			"write_key_value_pair",
+			"make_safe",
+			"ser",
+			"skiplist",
+			"serpent",
+			"verify-ask-arguments",
+			"n-Statements",
+			"statement",
+			"predicate",
+			"self.spritePieceNames",
+			"deletefrom",
+			"self.spritePiece",
+			"delSpritePiece",
+			"self.spritePieceNames",
+			"setSprpos",
+			"self.SpritePieceNames",
+			"spritePieceNames",
+			"1",
+			"carry-for-column",
+			"certain-value",
+			"value-of",
+			"assert",
+			"test-val",
+			"value-of",
+			"certain-value",
+			"value-of",
+			"retract",
+			"assume",
+			"contradiction-handler",
+			"ask-user-handl",
+			"handle-one-co",
+			"common-lisp",
+			"load-bps-system",
+			"value-of",
+			"extract",
+			"lookup",
+			"make-",
+			"calcu",
+			"setHitState",
+			"eventTags",
+			"mPerformResponse",
+			"respondToEvent",
+			"shallow_pr",
+			"score",
+			"executeProposedActions",
+			"performResponse",
+			"respondToEvent",
+			"performResponse",
+			"respondToEvent",
+			"setHitState",
+			"respondTOEvent",
+			"setEqpPo",
+			"setEqpPosition",
+			"setPosition",
+			"FXShot",
+			"draw",
+			"ModReticle",
+			"wrapCheckFree",
+			"mTargetClear",
+			"wrapTargetClear",
+			"mtargetClear",
+			"setHitSTate",
+			"FXReticle",
+			"wrap",
+			"FXReticle",
+			"ModCharacter",
+			"ModControllable",
+			"Target",
+			"target",
+			"validTarget",
+			"validTar",
+			"validTart",
+			"loSObjs",
+			"characterTrackInfo",
+			"strafeAnimation",
+			"use",
+			"sign",
+			"stability",
+			"canSeeObj",
+			"characterDetector",
+			"characterTracki",
+			"losObjs",
+			"node",
+			"floor",
+			"node",
+			"textbox",
+			"text",
+			"node",
+			"tick",
+			"setTarget",
+			"self.dir",
+			"ObjTorch",
+			"10",
+			"updatePos",
+			"attacHMod",
+			"rootSprite",
+			"addSpritePi",
+			"addPoint",
+			"connect",
+			"attachPoint",
+			"attacHF",
+			"self.attachPoints",
+			"updateAt",
+			"updateAttach",
+			"attach",
+			"setTarget",
+			"setAsTarget",
+			"setSprAn",
+			"ModFollow",
+			"Obj",
+			"ModReticle",
+			"ModFollowEffect",
+			"setAsTarget",
+			"target",
+			"animate",
+			"ModDrawableTD",
+			"updateSprites",
+			"addSpritePiece",
+			"\tlocal maxSpeed, maxSpeedY = self.maxSpeed, self.maxSpeedY\n\tlocal walkanim = math.abs(4 / self.velX)\n\tlocal newVelX = self.velX - self.referenceVel\n\twalkanim = math.max(walkanim, 0.18)\n\n\tif self.inAir then \n\t\tif self.turnTime and self.turnTime > 0 then\n\t\t\t\tself:changeAnimation({\"fallTurn\",\"fall\"})\n\t\telseif not self.turnTime and self.velY < 0 or self.jumping then\n\t\t\tself:changeAnimation(\"jump\")\n\t\telse\n\t\t\tself:changeAnimation({\"fall\",\"jump\"})\n\t\tend\n\telseif self.isCrouching then\n\t\tself:changeAnimation({\"crouch\",\"stand\"})\n\telseif self.isMoving then\n\t\tself.idleCounter = 0\n\t\tif (self.dir == 1 and newVelX < -16) or (self.dir == -1 and newVelX > 16) then\n\t\t\tself:changeAnimation({\"slideMore\",\"slide\",\"stand\"})\n\t\telse\n\t\t\tif self.status == \"offense\" and self.prepTime > 5 then\n\t\t\t\t--self:changeAnimation(\"prep2\")\n\t\t\t\t\n\t\t\t\t--self:freezeAnimation(\"body\",0.0)\n\t\t\t\t--self:freezeAnimation(\"head\",0.0)\n\t\t\tend \n\t\t\tif math.abs(newVelX) >= maxSpeed - 52 then\n\t\t\t\tself:changeAnimation({\"run\",\"walk\"})\n\t\t\telse\n\t\t\t\tself:changeAnimation(\"walk\")\n\t\t\tend\n\t\tend\n\telse\n\t\tif math.abs(newVelX) <= 32 then\n\t\t\tself.idleCounter = self.idleCounter + 1\n\t\t\tif self.status == \"offense\" and self.prepTime > 5 then\n\t\t\t--\tself:changeAnimation({\"prep\",\"stand\"})\n\t\t\telse\n\t\t\t\tif self.idleCounter >= 60 and self.idleCounter < 89 then\n\t\t\t\t\tself:changeAnimation({\"idleStart\",\"idle\",\"stand\"})\n\t\t\t\telseif self.idleCounter > 84 then\n\t\t\t\t\tself:changeAnimation({\"idle\",\"stand\"})\n\t\t\t\telse\n\t\t\t\t\tself:changeAnimation(\"stand\")\n\t\t\t\tend\n\t\t\tend\n\t\t\t-- if self.idleCounter >= 84 then\n\t\t\t-- \tself.idleCounter = 0\n\t\t\t-- end\n\t\telse\n\t\t\tself:changeAnimation({\"slide\",\"stand\"})\n\t\tend\n\tend\n\tif self.isHolding then\n\t\tself:changeAnimation({\"holding\",\"guard\"})\n\tend",
+			"ModDrawableTD",
+			"changeAnimation",
+			"orient",
+			"setSprPos"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"ModDrawable",
+			"ModControllable",
+			"ObjCamera",
+			"ObjBaseUnit",
+			"value-of",
+			"test-value",
+			"value-of",
+			"certain-value",
+			"value-of",
+			"test-val",
+			"mPerformResponse",
+			"ModLineFX",
+			"FXShot",
+			"ModTargeter",
+			"EqpHandgun",
+			"setTarget",
+			"ModReticle",
+			"FX",
+			"ObjReticle",
+			"ModFollow",
+			"ModDrawable",
+			"ModNPC",
+			"ModPathFinder",
+			"InfoAlethianAlliance",
+			"AlethianAlliance",
+			"InfoPistols",
+			"zzz",
+			"AIAlliances",
+			"AITrust",
+			"AIWeapons",
+			"AIOrderSilence",
+			"AIOrderRemainGround",
+			"AIOrder",
+			"hitInfo",
+			"ModCharacterDetector",
+			"ModLineOfSight",
+			"speedMod",
+			"ModSpeedZone",
+			"ModPhysics",
+			"AILocationRecognition",
+			"TagScorer",
+			"direct",
+			"inverse",
+			"counter",
+			"AICuriousity",
+			"AIConscientiousness",
+			"AINeuroticism",
+			"AIAgreeableness",
+			"identifyTags",
+			"self.allTagScores",
+			"self.allTagResponses",
+			"self.allTagIdentifiers",
+			"tagIdentifiers",
+			"self",
+			"Praise",
+			"AIPraiseCondemn",
+			"AIQuestionAnswer",
+			"self.tagResponses",
+			"AIBasicSpeech",
+			"ModOffscreen",
+			"AIBasicSpeech",
+			"AIHumanRecognition",
+			"ModControllable",
+			"ObjIntHitbox",
+			"AISpeech",
+			"AITrust",
+			"ObjTestNPC",
+			"ObjSpawnZone",
+			"ModCharacter",
+			"character",
+			"intConns",
+			"nextY",
+			"nextX",
+			"ObjRoomChanger",
+			"ModNPC",
+			"Room",
+			"ObjRoomManager",
+			"maxSpeedY",
+			"maxSpeedX",
+			"ObjFence",
+			"ObjRepeating",
+			"ObjGenericObj",
+			"ObjRepeating",
+			"ObjSlope",
+			"ObjStairs",
+			"ObjBaseUnitTD",
+			"ModControllable",
+			"onHitConfirm",
+			"maxSpeed",
+			"ObjTorch",
+			"ModActive",
+			"ObjWeapon",
+			"ModCheckView",
+			"ModEquippable",
+			"ModInteractive",
+			"ObjBase",
+			"ModActive",
+			"ObjBox",
+			"ObjTest",
+			"SomeOtherObj",
+			"ModBase",
+			"ModInventoryControl",
+			"ModControllable",
+			"ModInventory",
+			"ModEscapeFromHitstun",
+			"ModControllable",
+			"ModuleBase",
+			"ModuleExperimental",
+			"ModuleBase",
+			"--self:control",
+			"ModActive",
+			"ModDash",
+			"ModShield",
+			"ModHitbox",
+			"ModLight",
+			"updateHealth",
+			"ModInventory",
+			"ModDrawable",
+			"ModPhysics",
+			"ModActive",
+			"BodyObj",
+			"ObjBaseUnit",
+			"speedModifier",
+			"Relationship",
+			"Memory",
+			"SSHangingLight",
+			"buyer",
+			"Shop"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "modules/ModControllable.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3900,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								325,
+								325
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "objects/ObjChar.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2978,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1339,
+								1339
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 867.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "modules/ModCharacter.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2894,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								197,
+								197
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Lua/Lua.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "modules/ModCharacterDetector.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4345,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								200,
+								200
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "extra.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4168,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3836,
+								3836
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 2640.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 172.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Love",
+	"project": "Inconsequential-Game.sublime-project",
+	"replace":
+	{
+		"height": 94.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"extr",
+				"extra.lua"
+			],
+			[
+				"util",
+				"util.lua"
+			],
+			[
+				"mgame",
+				"MGame.lua"
+			],
+			[
+				"moddrawable",
+				"modules\\ModDrawable.lua"
+			],
+			[
+				"objbaseunit",
+				"objects\\ObjBaseUnit.lua"
+			],
+			[
+				"objchar",
+				"objects\\ObjChar.lua"
+			],
+			[
+				"modcontr",
+				"modules\\ModControllable.lua"
+			],
+			[
+				"objcrate",
+				"objects\\ObjCrate.lua"
+			],
+			[
+				"sprhathe",
+				"assets\\spr\\scripts\\SprHatHelmet.lua"
+			],
+			[
+				"sprcrate",
+				"assets\\spr\\scripts\\SprCrate.lua"
+			],
+			[
+				"modpartem",
+				"modules\\ModPartEmitter.lua"
+			],
+			[
+				"modphy",
+				"modules\\ModPhysics.lua"
+			],
+			[
+				"ser",
+				"libs\\ser.lua"
+			],
+			[
+				"moddraw",
+				"modules\\ModDrawable.lua"
+			],
+			[
+				"contr",
+				"modules\\ModControllable.lua"
+			],
+			[
+				"moddrawab",
+				"modules\\ModDrawable.lua"
+			],
+			[
+				"objroomch",
+				"objects\\ObjRoomChanger.lua"
+			],
+			[
+				"roomch",
+				"modules\\ModRoomChanger.lua"
+			],
+			[
+				"speedzo",
+				"modules\\ModSpeedZone.lua"
+			],
+			[
+				"extra",
+				"extra.lua"
+			],
+			[
+				"modcharacter",
+				"modules\\ModCharacter.lua"
+			],
+			[
+				"modchara",
+				"modules\\ModCharacter.lua"
+			],
+			[
+				"objhand",
+				"objects\\EqpHandgun.lua"
+			],
+			[
+				"aisurv",
+				"ai\\AISurvival.lua"
+			],
+			[
+				"infopis",
+				"ai\\info\\InfoPistols.lua"
+			],
+			[
+				"modcharac",
+				"modules\\ModCharacter.lua"
+			],
+			[
+				"modchar",
+				"modules\\ModCharacter.lua"
+			],
+			[
+				"ai",
+				"assets\\ai\\AIAlliance.lua"
+			],
+			[
+				"objbase",
+				"ObjBase.lua"
+			],
+			[
+				"xl",
+				"xl\\Lights.lua"
+			],
+			[
+				"aisur",
+				"ai\\AISurvival.lua"
+			],
+			[
+				"info",
+				"ai\\info\\InfoAlethianAlliance.lua"
+			],
+			[
+				"human",
+				"ai\\AIHumanRecognition.lua"
+			],
+			[
+				"aiba",
+				"ai\\AIBasicSpeech.lua"
+			],
+			[
+				"aipis",
+				"ai\\info\\InfoPistols.lua"
+			],
+			[
+				"handg",
+				"objects\\EqpHandgun.lua"
+			],
+			[
+				"modtargete",
+				"modules\\ModTargetEqp.lua"
+			],
+			[
+				"objhandg",
+				"objects\\EqpHandgun.lua"
+			],
+			[
+				"npc",
+				"assets\\npcs\\guard.lua"
+			],
+			[
+				"objtestnp",
+				"objects\\ObjTestNPC.lua"
+			],
+			[
+				"modcha",
+				"modules\\ModCharacter.lua"
+			],
+			[
+				"aihu",
+				"ai\\AIHumanRecognition.lua"
+			],
+			[
+				"pistol",
+				"ai\\info\\InfoPistols.lua"
+			],
+			[
+				"aisuriva",
+				"ai\\AISurvival.lua"
+			],
+			[
+				"modinve",
+				"modules\\ModInventory.lua"
+			],
+			[
+				"modequ",
+				"modules\\ModEquippable.lua"
+			],
+			[
+				"modlinef",
+				"modules\\ModLineFX.lua"
+			],
+			[
+				"modline",
+				"modules\\ModLineFX.lua"
+			],
+			[
+				"fxs",
+				"objects\\FXShot.lua"
+			],
+			[
+				"fxshot",
+				"objects\\FXShot.lua"
+			],
+			[
+				"modactiv",
+				"modules\\ModActive.lua"
+			],
+			[
+				"modac",
+				"modules\\ModCharacterDetector.lua"
+			],
+			[
+				"phys",
+				"modules\\ModPhysics.lua"
+			],
+			[
+				"modtarg",
+				"modules\\ModTargetEqp.lua"
+			],
+			[
+				"modcon",
+				"modules\\ModControllable.lua"
+			],
+			[
+				"charat",
+				"modules\\ModCharacterDetector.lua"
+			],
+			[
+				"pathf",
+				"modules\\ModPathFinder.lua"
+			],
+			[
+				"fxre",
+				"objects\\FXReticle.lua"
+			],
+			[
+				"modtarget",
+				"modules\\ModTargetEqp.lua"
+			],
+			[
+				"sprtar",
+				"assets\\spr\\scripts\\SprTorchEqp.lua"
+			],
+			[
+				"sprbody",
+				"assets\\spr\\scripts\\SprBodyUniform.lua"
+			],
+			[
+				"modcharacterde",
+				"modules\\ModCharacterDetector.lua"
+			],
+			[
+				"targ",
+				"modules\\ModTargetEqp.lua"
+			],
+			[
+				"modcontrol",
+				"modules\\ModControllable.lua"
+			],
+			[
+				"modcont",
+				"modules\\ModControllable.lua"
+			],
+			[
+				"sprhandg",
+				"assets\\spr\\scripts\\SprHandgun.lua"
+			],
+			[
+				"sprb",
+				"assets\\spr\\scripts\\SprBodyUniform.lua"
+			],
+			[
+				"modeq",
+				"modules\\ModEquippable.lua"
+			],
+			[
+				"settingm",
+				"SettingManager.lua"
+			],
+			[
+				"invent",
+				"xl\\Inventory.lua"
+			],
+			[
+				"eqph",
+				"objects\\EqpHandgun.lua"
+			],
+			[
+				"weapon",
+				"objects\\ObjWeapon.lua"
+			],
+			[
+				"objcha",
+				"objects\\ObjChar.lua"
+			],
+			[
+				"modtea",
+				"modules\\ModTargetEqp.lua"
+			],
+			[
+				"chard",
+				"modules\\ModCharacterDetector.lua"
+			],
+			[
+				"ex",
+				"extra.lua"
+			],
+			[
+				"modph",
+				"modules\\ModPhysics.lua"
+			],
+			[
+				"ut",
+				"util.lua"
+			],
+			[
+				"characterd",
+				"modules\\ModCharacterDetector.lua"
+			],
+			[
+				"modtar",
+				"modules\\ModTargetEqp.lua"
+			],
+			[
+				"modnpc",
+				"modules\\ModNPC.lua"
+			],
+			[
+				"objnpc",
+				"objects\\ObjTestNPC.lua"
+			],
+			[
+				"modc",
+				"modules\\ModControllable.lua"
+			],
+			[
+				"eqphand",
+				"objects\\EqpHandgun.lua"
+			],
+			[
+				"text",
+				"mixin\\TextInterface.lua"
+			],
+			[
+				"textengin",
+				"xl\\TextEngine.lua"
+			],
+			[
+				"textbox",
+				"xl\\TextBox.lua"
+			],
+			[
+				"dialog",
+				"mixin\\DialogActive.lua"
+			],
+			[
+				"sprl",
+				"assets\\spr\\scripts\\SprLegBoots.lua"
+			],
+			[
+				"body",
+				"assets\\spr\\scripts\\SprBodyUniform.lua"
+			],
+			[
+				"inven",
+				"modules\\ModInventory.lua"
+			],
+			[
+				"modact",
+				"modules\\ModActive.lua"
+			],
+			[
+				"sprhead",
+				"assets\\spr\\scripts\\SprHeadPeridot.lua"
+			],
+			[
+				"modequi",
+				"modules\\ModEquippable.lua"
+			],
+			[
+				"eqp",
+				"objects\\EqpHandgun.lua"
+			],
+			[
+				"sprhandgun",
+				"assets\\spr\\scripts\\SprHandgun.lua"
+			],
+			[
+				"sprtorcheq",
+				"assets\\spr\\scripts\\SprTorchEqp.lua"
+			],
+			[
+				"objtorc",
+				"objects\\ObjTorch.lua"
+			],
+			[
+				"sprtor",
+				"assets\\spr\\scripts\\SprTorch.lua"
+			],
+			[
+				"objtorch",
+				"objects\\ObjTorch.lua"
+			],
+			[
+				"equipi",
+				"mixin\\EquipIcon.lua"
+			],
+			[
+				"sprleg",
+				"assets\\spr\\scripts\\SprLegBoots.lua"
+			],
+			[
+				"sprbod",
+				"assets\\spr\\scripts\\SprBodyUniform.lua"
+			],
+			[
+				"sprite",
+				"xl\\SpritePiece.lua"
+			],
+			[
+				"sprre",
+				"assets\\spr\\scripts\\SprReticle.lua"
+			],
+			[
+				"modret",
+				"modules\\ModReticle.lua"
+			],
+			[
+				"sprr",
+				"assets\\spr\\scripts\\SprReticle.lua"
+			],
+			[
+				"modre",
+				"modules\\ModReticle.lua"
+			],
+			[
+				"modfol",
+				"modules\\ModFollow.lua"
+			],
+			[
+				"objslop",
+				"objects\\ObjSlope.lua"
+			],
+			[
+				"objcr",
+				"objects\\ObjCrate.lua"
+			],
+			[
+				"objch",
+				"objects\\ObjChar.lua"
+			],
+			[
+				"mod",
+				"modules\\ModInventory.lua"
+			],
+			[
+				"obj",
+				"objects\\ObjTestNPC.lua"
+			],
+			[
+				"modspeedzone",
+				"modules\\ModSpeedZone.lua"
+			],
+			[
+				"objslope",
+				"objects\\ObjSlope.lua"
+			],
+			[
+				"modcontroll",
+				"modules\\ModControllable.lua"
+			],
+			[
+				"modcharacterd",
+				"modules\\ModCharacterDetector.lua"
+			],
+			[
+				"setting",
+				"SettingManager.lua"
+			],
+			[
+				"modpath",
+				"modules\\ModPathFinder.lua"
+			],
+			[
+				"mgam",
+				"MGame.lua"
+			],
+			[
+				"objbaseunittd",
+				"objects\\ObjBaseUnitTD.lua"
+			],
+			[
+				"worldma",
+				"objects\\ObjWorldManager.lua"
+			],
+			[
+				"modch",
+				"modules\\ModCharacter.lua"
+			],
+			[
+				"moddrawa",
+				"modules\\ModDrawableTD.lua"
+			],
+			[
+				"drawab",
+				"modules\\ModDrawable.lua"
+			],
+			[
+				"scene",
+				"xl\\Scene.lua"
+			],
+			[
+				"modpathf",
+				"modules\\ModPathFinder.lua"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 225.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
