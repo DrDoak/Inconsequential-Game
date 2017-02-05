@@ -4,9 +4,9 @@ local multiRefObjects = {
 } -- multiRefObjects
 local obj1 = {
 	["initY"] = 12;
-	["worldX"] = 11;
-	["worldY"] = 44;
+	["worldX"] = 18;
+	["worldY"] = 43;
 	["initRoom"] = "assets/initRooms/Starting Point.lua";
-	["initX"] = 60;
+	["initX"] = 5;
 }
 return obj1

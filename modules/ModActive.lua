@@ -1,7 +1,8 @@
 local ModActive = Class.create("ModActive", Entity)
 
 ModActive.dependencies = {"ModPartEmitter","ModTargetable"}
-ModActive.trackFunctions = {"setHitState","normalState","hitState","onDeath","onHitConfirm","onKill"}
+ModActive.trackFunctions = {"setHitState","normalState","hitState","onDeath","onHitConfirm","onKill",
+"setHealth","setGuard","onBlock"}
 
 function ModActive:create()
 	--default state information
@@ -26,6 +27,8 @@ function ModActive:create()
 	self.redHealth = self.health
 	self.redHealthDelay = 0
 	self.killCount = 0
+	self.KBRatio = 1
+	self.angle = 0
 
 	self:addEmitter("hitFX" , self.hitFX or "assets/spr/fx/hit.png")
 	self:setRandomDirection("hitFX" , 3 * 32)
@@ -69,11 +72,11 @@ function ModActive:tick( dt )
 		self:specialState( dt )
 		elseif self.state ~= 3 then
 			self.status = "normal"
-			self:normalState()
+			self:normalState( dt )
 		end
 	
 		if self.health > 0 and  self.state == 3 then
-			self:hitState() 			-- self.status = "stun"
+			self:hitState(dt) 			-- self.status = "stun"
 		end
 	end
 	self.isMoving = self.isMoving or  self.isMovingX or self.isMovingY
@@ -157,21 +160,27 @@ function ModActive:setHitState(hitInfo)
 				self.dir = 1
 			end
 		end
-		
-		self.stun = st
-
-		self:setHealth(self.redHealth - dm)
-		if not self.superArmor then
-			self.body:setLinearVelocity(forceX * ratio,forceY * ratio)
+		if (not unblockable and self.blocking) then
+			self:onBlock(hitInfo)
+			return "blocked"
+		else
+			self.stun = st
+			self:setHealth(self.redHealth - dm)
+			if not self.superArmor then
+				self.body:setLinearVelocity(forceX * ratio,forceY * ratio)
+			end
+			self.invincibleTime = 0
+			return "hit"
 		end
-		self.invincibleTime = 0
-		return "hit"
 	else
 		return false
 	end
 end
 
-function ModActive:hitState()
+function ModActive:onBlock( hitInfo )
+end
+
+function ModActive:hitState(dt)
 	self:overrideAnimation("legs")
 	self:overrideAnimation("body")
 	self:overrideAnimation("head")
@@ -183,72 +192,18 @@ function ModActive:hitState()
 	end
 
 	self.isMoving = false
-	if self.body:getGravityScale() ~= 1.0 then
-		self.body:setGravityScale(1.0)
-	end
-	if self.inAir then 
-		self:changeAnimation({"hitmore","hit"})
-		if math.abs(self.angle) < (2*math.pi)/4 then
-			self.angle = self.angle + (0.00004 * self.velX * math.min(30,self.stun))
-		end
-		self:setSprAngle(self.angle)
-	end
-	if not self.inAir and math.abs(self.angle) > math.pi/2 then
-		self.angle = 0
-		self:setSprAngle(self.angle)
-		local function grounded( player, frame )
-			if frame == 1 then
-				self:changeAnimation("ground")
-			end
-			if frame > math.random(40,100) then
-				player.exit = true
-				local function hit_ground( player, count )
-					player:changeAnimation("crouch")
-					if count >= 24 then
-						self.lastHitObj = nil
-						player.exit = true
-					end
-				end
-				self:setSpecialState(hit_ground)
-			end
-		end
-		self:setSpecialState(grounded)
-	end
 
 	if self.stun > 0 then
-		self.stun = self.stun - 1
+		self.stun = self.stun - dt
 	else
-		-- lume.trace("end of stun")
-		if self.inAir and math.random(1,30) == 2 then
-			-- lume.trace("setting state to 1")
-			-- lume.trace("recovering")
-			self.status = "normal"
-			self.state = 1
-			local function recover( player, frame )
-				-- lume.trace("Recovering: ", frame)
-				player:animate()
-				player.angle = player.angle - (0.5 * self.dir)
-				player:setSprAngle(player.angle)
-				if frame == 1 then
-					self.body:setLinearVelocity(self.velX, -self.jumpSpeed/10)
-				end
-				if frame >= 7 then
-					player.angle = 0
-					player:setSprAngle(player.angle)
-					player.exit = true
-				end
-			end
-			self:setSpecialState(recover)
-		elseif not self.inAir then
-			self:animate()
-			self:resetAnimation("body")
-			self:resetAnimation("head")
-			self:resetAnimation("legs")
-			self.angle = 0
-			self:setSprAngle(self.angle)
-			self.status = "normal"
-			self.state = 1
-		end
+		self:animate()
+		self:resetAnimation("body")
+		self:resetAnimation("head")
+		self:resetAnimation("legs")
+		self.angle = 0
+		self:setSprAngle(self.angle)
+		self.status = "normal"
+		self.state = 1
 	end
 end
 
@@ -308,10 +263,10 @@ function ModActive:specialState(dt )
 	end
 end
 
-function ModActive:setHealth( health )
+function ModActive:setHealth( health ,redHealth)
 	local diff = health - self.health
 	self.health = math.min(self.max_health,math.max(health,0))
-	self.redHealth = math.min(self.redHealth,self.health)
+	self.redHealth = math.min((redHealth or self.redHealth),self.health)
 	if diff > 0 then
 		self:emit("heal", math.max(math.min(math.floor(math.abs(diff)/4),2),2))
 	elseif diff < 0 then

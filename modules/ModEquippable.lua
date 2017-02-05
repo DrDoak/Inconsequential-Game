@@ -94,7 +94,6 @@ function ModEquippable:onPlayerInteract(player,data)
 		self.toDestroy = true
 	elseif not self.isKeyItem and not self.toDestroy then 
 		if player ~= self.user and not self.gettingPutDown then
-			lume.trace()
 			player:addToInv(self,self.stackable,nil,false,true)
 			if self.depth then self.depth = nil end
 			if self.inserted then

@@ -4,24 +4,36 @@ local Scene = require "xl.Scene"
 function ModPartEmitter:create()
 	self.psystems = self.psystems or {}
 	self.nodes = self.nodes or {}
+	self.offsets = self.offsets or {}
+	self.emitOffsetX = 0
 end
 
-function ModPartEmitter:addEmitter(emitterName , image,size, funct)
+function ModPartEmitter:addEmitter(emitterName , image,size, funct,xOff,yOff)
 	emitterName = emitterName or "default"
 	local img = love.graphics.newImage(image  or "assets/spr/fx/orb_burst.png")
 	self.psystems[emitterName] = love.graphics.newParticleSystem(img, size or 32);
 	if funct then
 		funct(self.psystems[emitterName])
 	end
+	self.offsets[emitterName] = {}
+	self.offsets[emitterName].x = xOff or 0
+	self.offsets[emitterName].y = yOff or 0
+
 	--self.psystems[emitterName]:setLinearAcceleration(-5, -4, 100, 100); -- Randomized movement towards the bottom of the screen.
 	--self.psystems[emitterName]:setColors(255, 255, 255, 255, 255, 255, 255, 0); -- Fade to black.
 	self.nodes[emitterName] = Scene.wrapNode( function (  )
-		love.graphics.draw(self.psystems[emitterName],self.x,self.y);
+		love.graphics.draw(self.psystems[emitterName],self.x + self.offsets[emitterName].x ,self.y + self.offsets[emitterName].y);
 	end, 9000)
 	Game.scene:insert( self.nodes[emitterName] )
 end
+
 function ModPartEmitter:emit( emitterName, numParticles )
 	self.psystems[emitterName]:emit(numParticles)
+end
+
+function ModPartEmitter:emitOffsets( emitterName, offX,offY )
+	self.offsets[emitterName].x = xOff or 0
+	self.offsets[emitterName].y = yOff or 0
 end
 
 function ModPartEmitter:setRandomDirection( emitterName, speed )
@@ -47,6 +59,10 @@ end
 
 function ModPartEmitter:setFade( emitterName )
 	self.psystems[emitterName]:setColors(255, 255, 255, 255, 255, 255, 255, 0); -- Fade to black.
+end
+
+function ModPartEmitter:setColors( emitterName, colors)
+	self.psystems[emitterName]:setColors(unpack(colors)); -- Fade to black.
 end
 
 function ModPartEmitter:setRandRotation( emitterName, minR, maxR , variation)

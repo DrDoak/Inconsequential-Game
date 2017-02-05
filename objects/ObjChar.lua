@@ -46,6 +46,9 @@ function ObjChar:create()
 
 	self:addModule(require "modules.ModControllable")
 	self:addModule(require "modules.ModCharacter")
+	self:addModule(require "modules.ModHasHUD")
+	self:addModule(require "modules.ModShield")
+	self:addModule(require "modules.ModDash")
 	
 	-- self:addSpritePiece(require("assets.spr.scripts.SprLegPeridot"))
 	-- self:addSpritePiece(require("assets.spr.scripts.SprBodyPeridot"))

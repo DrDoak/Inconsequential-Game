@@ -113,7 +113,6 @@ function ModDrawable:changeAnimation(animation,speedMod,spritePieces)
 	return hasAnimation
 end
 
-
 function ModDrawable:updateSprites()
 	if self.body then
 		self.x,self.y = self.body:getPosition()
@@ -129,6 +128,13 @@ function ModDrawable:updateSprites()
 		Game.scene:move(spr,(self.depth or self.y) + (spr.zDiff or 0))
 	end
 	self:setSprPos(self.x,self.y + 29 + math.floor(self.vHeight/2))
+end
+
+function ModDrawable:setSprColor( r,g,b,a )
+	for i,spriteName in ipairs(self.spritePieceNames) do
+		local spr = self.sprites[spriteName]
+		spr:setColor(r,g,b,a)
+	end
 end
 
 function ModDrawable:orientAllSprites()
