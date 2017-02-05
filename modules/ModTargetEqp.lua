@@ -64,8 +64,6 @@ function ModTargetEqp:create()
 end
 
 function ModTargetEqp:destroy( dt )
-	lume.trace(self.infoText)
-	lume.trace(self.insertedTargetText)
 	if self.infoText and self.insertedTargetText then
 		Game.scene:remove(self.infoText)
 	end

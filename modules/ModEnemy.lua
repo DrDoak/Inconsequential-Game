@@ -74,7 +74,6 @@ function ModEnemy:tryAttack()
 	local dist = self:getDistanceToPoint(self.target.x,self.target.y)
 	--lume.trace(self.attackRange, self.timeSinceLastAttack,self.attackRate)
 	if self.timeSinceLastAttack > self.attackRate then
-		lume.trace()
 		self:onAttack()
 	end
 end

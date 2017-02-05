@@ -19,6 +19,7 @@ function ObjWall:create()
 	self.fixture:setFriction(0.0)
 	self.body:setUserData(self)
 	self.thruTimer = -1
+	self.fixtureDRAW = xl.SHOW_HITBOX(self.fixture)
 end
 
 function ObjWall:tick(dt)

@@ -52,7 +52,7 @@ function WorldGen:quickStart()
 	local newTable = {}
 	newTable = util.persistence.load("assets/randRooms/WorldEval.lua")
 	self.evalArea = newTable
-	Game.WorldManager.evalArea = self.evalArea
+	Game.worldManager.evalArea = self.evalArea
 	local newTable2 = {}
 	newTable2 = util.persistence.load("assets/randRooms/WorldGenInfo.lua")
 	util.print_table(newTable2)
@@ -67,8 +67,8 @@ function WorldGen:quickStart()
 	newInitRoom = util.persistence.load(newTable2.initRoom)
 	--lume.trace(newTable)
 	lume.trace("NEwWorldX: ", newTable2.worldX, "newWorldY.", newTable2.worldY)
-	Game.WorldManager.worldX = newTable2.worldX
-	Game.WorldManager.worldY = newTable2.worldY
+	Game.worldManager.worldX = newTable2.worldX
+	Game.worldManager.worldY = newTable2.worldY
 	Game:loadRoom(newInitRoom)
 end
 
@@ -86,7 +86,9 @@ end
 
 function WorldGen:start()
 	if true then
+		lume.trace()
 		if not self.generated then
+			lume.trace()
 			local function default(worldgen)
 				lume.trace("Running default funct") 
 				worldgen:addInitialGoals(3)
@@ -102,16 +104,15 @@ function WorldGen:start()
 			generateFunct(self)
 			self:saveWorldInfo()
 		end
-
 		self.roomsGenerated = 2
 		-- lume.trace("starting Player at position: ", self.startPos.x, self.startPos.y)
 		self.initRoom:loadRoom(self.startPos.x,self.startPos.y)
-
+		lume.trace()
 		self:saveCurrentRoom("assets/initRooms/" .. Game.roomname .. ".lua")
 	else
 		self:quickStart()
 	end
-	Game.WorldManager:respawnFromDeath(Game.player)
+	Game.worldManager:respawnFromDeath(Game.player)
 	--util.print_table(self.evalArea)
 end
 
@@ -370,7 +371,7 @@ function WorldGen:loadRoom( name , dir, prevX, prevY,newX,newY)
 	-- lume.trace("PREDEF: ", predef, (predef == "assets/rooms/pd-"))
 	if name == "assets/rooms/Gen" then
 		local roomGen = self:addNewRoom(prevX,prevY,Game.curMapTable,dir)
-		local newPos = roomGen:addPreviousExit(dir, roomName, prevX, prevY,Game.WorldManager.worldX,Game.WorldManager.worldY)
+		local newPos = roomGen:addPreviousExit(dir, roomName, prevX, prevY,Game.worldManager.worldX,Game.worldManager.worldY)
 		--self.evalArea[math.floor(newPos.x/32)][math.floor(newPos.y/32)]["exitDir"] = dir
 		self:addOtherRoomExits(roomGen, dir)
 		--lume.trace("new pos: " , newPos.x, newPos.y)
@@ -380,7 +381,7 @@ function WorldGen:loadRoom( name , dir, prevX, prevY,newX,newY)
 	elseif predef == "assets/rooms/pd-" then
 		-- lume.trace("pd----")
 		local roomGen = self:addPredefRoom(prevX,prevY,Game.curMapTable,dir,string.sub(name,17,-1))
-		local newPos = roomGen:addPreviousExit(dir, roomName, prevX, prevY,Game.WorldManager.worldX,Game.WorldManager.worldY)
+		local newPos = roomGen:addPreviousExit(dir, roomName, prevX, prevY,Game.worldManager.worldX,Game.worldManager.worldY)
 		--self.evalArea[math.floor(newPos.x/32)][math.floor(newPos.y/32)]["exitDir"] = dir
 		self:addOtherRoomExits(roomGen, dir)
 		--lume.trace("new pos: " , newPos.x, newPos.y)
@@ -401,8 +402,8 @@ function WorldGen:loadRoom( name , dir, prevX, prevY,newX,newY)
 		end
 		self:processRoomChanges(newTable, name, RoomUtils.invertDir(dir), newX, newY, prevX,prevY, Game.roomname)
 
-		Game.WorldManager.worldX = newTable.worldX
-		Game.WorldManager.worldY = newTable.worldY
+		Game.worldManager.worldX = newTable.worldX
+		Game.worldManager.worldY = newTable.worldY
 		Game:loadRoom(newTable)
 	end
 end
@@ -421,7 +422,7 @@ function WorldGen:processRoomChanges( mapTable, roomName , dir, prevX,prevY,newP
 		for i,layer in ipairs(mapTable["layers"]) do
 			if layer["name"] == "Objectlayer" then
 				for i2,object in ipairs(layer["objects"]) do
-					if object["type"] == "ObjLevelChanger" then
+					if object["type"] == "ObjRoomChanger" then
 						if (dir == "left" and object.x <= 32) or 
 							(dir == "right" and object.x >= (mapTable["width"] * 16) - 64) or
 							(dir == "up" and object.y <= 32) or 
@@ -550,6 +551,7 @@ function WorldGen:addNewRoom(prevX,prevY,curRoom,dir,predefStruct)
 		local rmgn = RoomGen(roomWidth * 32,roomHeight * 32, name,startX,startY,self.embelishFunct,self.objFunct, self.enemyFunct,self.blockFunc)
 	end
 	local rmgn = RoomGen(roomWidth * 32,roomHeight * 32, name,startX,startY,self.embelishFunct,self.objFunct, self.enemyFunct,self.blockFunc)
+	lume.trace(rmgn)
 	rmgn:setType(maxType, pathCounts, pathCounts[maxType].count,self)
 	if self.pregenFunc then self.pregenFunc(rmgn) end
 	self:fillArea(startX,startY,roomWidth,roomHeight,name,startX,startY)
@@ -828,7 +830,7 @@ function WorldGen:addOtherRoomExits(roomGen)
 						goal = rightRoom["room"]
 					end
 				end
-				lume.trace("y: ", y)
+				-- lume.trace("y: ", y)
 				lume.trace("Adding exit at : ", roomGen.width, posY, "Goal: ", goal)
 				startPoint.x = math.ceil(roomGen.width/8)*8 - 4
 				startPoint.y = math.ceil(posY/8) * 8 - 4

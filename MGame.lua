@@ -420,13 +420,14 @@ end
 
 -- This function loads a room from a table containing the room's information.
 function MGame:i_loadRoom( name, loadData )
-	self.worldManager:onRoomLoad( name, self.roomname )
+	local newName
 	if type(name) == "table" then
-		self.roomname = name.name
+		newName = name.name
 	else
-		self.roomname = name
+		newName = name
 	end
-
+	self.worldManager:onRoomLoad( newName, self.roomname )
+	self.roomname = newName
 	-- clear all entities 
 	-- Before we can create a new room, we must clear our entities list to remove objects in the old room.
 	-- Otherwise, we would be updating objects that are not currently relevant, and wastes time.

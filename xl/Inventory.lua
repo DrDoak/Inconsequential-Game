@@ -419,7 +419,7 @@ function Inventory:draw( selectedRow, selectedCol  )
 		end
 	end
 
-	if Game.WorldManager.worldGen then
+	if Game.worldManager.worldGen then
 		self:drawMap()
 	end
 	graphics.pop()
@@ -427,7 +427,7 @@ end
 
 function Inventory:drawMap()
 	local graphics = love.graphics
-	local worldMap = Game.WorldManager.worldGen.evalArea
+	local worldMap = Game.worldManager.worldGen.evalArea
 	local worldX = 0
 	local mapStartX = 128
 	local mapStartY = -196
@@ -479,8 +479,8 @@ function Inventory:drawMap()
 		worldY = 0
 	end
 	graphics.setColor(255,0,255)
-	love.graphics.rectangle("fill", (Game.WorldManager.worldX - 1)* 16 + mapStartX + 4 + math.floor((Game.player.x/16)/32) * 16,
-		(Game.WorldManager.worldY-1) * 16 + mapStartY + 4 + math.floor((Game.player.y/16)/32) * 16, 8,8)
+	love.graphics.rectangle("fill", (Game.worldManager.worldX - 1)* 16 + mapStartX + 4 + math.floor((Game.player.x/16)/32) * 16,
+		(Game.worldManager.worldY-1) * 16 + mapStartY + 4 + math.floor((Game.player.y/16)/32) * 16, 8,8)
 	graphics.setColor(255,255,255)
 end
 function Inventory:setPosition( x , y )

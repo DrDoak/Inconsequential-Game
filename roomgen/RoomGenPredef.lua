@@ -28,12 +28,11 @@ function RoomGenPredef:generate()
 	self:addCorners()
 
 	self:addExtraStructs()
-	self:fillEmpty()
+	-- self:fillEmpty()
 	--self:finishPaths()
-	self.room:drawAllEdgeMaps()
+	-- self.room:drawAllEdgeMaps()
 	self.roomGenerated = true
 	--self:finishEnemies()
-
 end
 
 function RoomGenPredef:generateMainStruct()
@@ -63,9 +62,9 @@ function RoomGenPredef:linkToMainStruct()
 	while i <= table.getn(self.exits) do
 		-- self.corners = RoomUtils.identifyAll(self.evalArea,"corner")
 		local testStart = exitList[i]
-		lume.trace("start: ", testStart.x, testStart.y)
+		-- lume.trace("start: ", testStart.x, testStart.y)
 		local testEnd = self:closestPoint(testStart,self.mainStructExits)
-		lume.trace("end: ", testEnd.x, testEnd.y)
+		-- lume.trace("end: ", testEnd.x, testEnd.y)
 
 		-- testStart = RoomUtils.tileToEval(nextEnd)
 		-- testEnd = RoomUtils.tileToEval(closestMain)

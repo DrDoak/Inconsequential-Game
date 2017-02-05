@@ -11,6 +11,7 @@ function ModControllable:normalState()
 	self:normalMove()
 	self:animate()
 	self:proccessInventory()
+	self:debugDisplay()
  	xl.DScreen.print("charpos: ", "(%f,%f)",self.x,self.y)
  	xl.DScreen.print("charDir: ", "(%f)",self.dir)
  	xl.DScreen.print("speedMod: ", "(%f,%f)",self.speedModX,self.speedModY)
@@ -95,6 +96,40 @@ function ModControllable:performResponse( eventName, eventTags, params )
 			end
 		end
 	end
+end
+
+function ModControllable:debugDisplay()
+	local inAir
+	if self.inAir then inAir = 1 else inAir = 0 end
+	local isDown 
+	if Keymap.isDown("down") then isDown = 1 else isDown = 0 end
+	xl.DScreen.print("ObjWorldManager.timeInRoom", "(%f)", Game.worldManager.timeInRoom)
+	-- xl.DScreen.print("ObjChar.force", "(%f,%f)", self.forceX, self.forceY)
+	-- xl.DScreen.print("ObjChar.pos", "(%d,%d)", self.x, self.y)
+	-- xl.DScreen.print("ObjChar.vel", "(%d,%d)", self.velX, self.velY)
+	-- xl.DScreen.print("ObjChar.status: ","(%s)", self.status)
+
+	-- xl.DScreen.print("ObjChar.slopeDir", "(%f)", self.slopeDir)
+	local roomX = math.ceil(math.floor(self.x/16)/8)
+	local roomY = math.ceil(math.floor(self.y/16)/8)
+	xl.DScreen.print("ModControllable.structCoord", "(%d,%d)", roomX, roomY)
+	local area = Game.worldManager.evalArea
+	local areaName = "None"
+	local timeStamp = 0
+	if area and area[roomX] and area[roomX][roomY] then
+		areaName = area[roomX][roomY]["type"]
+		if area[roomX][roomY]["structNum"] then
+			timeStamp = area[roomX][roomY]["structNum"]
+		end
+	end
+	--lume.trace(areaName)
+	xl.DScreen.print("Current struct time: ","(%d)",timeStamp)
+	xl.DScreen.print("Current Struct: ","(%s)",areaName)
+	-- self.TextInterface:setPosition(74,32)
+	-- self.TextInterface:print("Relevance", "%i", self.relevance)
+	-- self.TextInterface:print("Money", "%i", self.money)
+	-- -- xl.TextInterface.setposition(146,32)
+	-- self.TextInterface:print("Reals", "%i", self.reals)
 end
 
 return ModControllable

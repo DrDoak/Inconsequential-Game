@@ -17,25 +17,25 @@ VoronoiSolve.weighted_voronoi_diagram  = function(graph, centers)
 		k = k+1
 		-- lume.trace("k:",k)
 		leastDifficultCenter = VoronoiSolve.updateDifficulties( centers)
-		lume.trace("leastDifficultCenter: ", leastDifficultCenter.id,"diff: " ,leastDifficultCenter.districtDifficulty)
+		-- lume.trace("leastDifficultCenter: ", leastDifficultCenter.id,"diff: " ,leastDifficultCenter.districtDifficulty)
 		VoronoiSolve.updateDistances( graph, centers, initialDistances, meanDiff,distances )
 		local candidates = VoronoiSolve.findMigrationCandidates(graph,centers, distances, leastDifficultCenter)
 		VoronoiSolve.transferPoints(graph,candidates,leastDifficultCenter)
 		-- construct_voronoi(graph, centers, migrating_candidates)
 	until (#candidates==0)
-	lume.trace("leastDifficultCenter: ", leastDifficultCenter.id)
-	lume.trace("Mean Diff: " ,meanDiff)
+	-- lume.trace("leastDifficultCenter: ", leastDifficultCenter.id)
+	-- lume.trace("Mean Diff: " ,meanDiff)
 	for i,v in ipairs(graph.nodeList) do
-		lume.trace("---Node: " .. v.id)
-		lume.trace("X: " .. v.x)
-		lume.trace("Y: " .. v.y)
+		-- lume.trace("---Node: " .. v.id)
+		-- lume.trace("X: " .. v.x)
+		-- lume.trace("Y: " .. v.y)
 		if v.isCenter then
-			lume.trace("I am a Center")
-			lume.trace("difficulty = ", v.districtDifficulty)
-			lume.trace("Num Members: ",#v.members)
+			-- lume.trace("I am a Center")
+			-- lume.trace("difficulty = ", v.districtDifficulty)
+			-- lume.trace("Num Members: ",#v.members)
 		else
-			lume.trace("Closest Center " .. v.currentClosest.id)
-			lume.trace("distance to Center: " .. distances[v.id][v.currentClosest.id])
+			-- lume.trace("Closest Center " .. v.currentClosest.id)
+			-- lume.trace("distance to Center: " .. distances[v.id][v.currentClosest.id])
 		end
 	end
 	return graph

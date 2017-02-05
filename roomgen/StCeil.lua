@@ -1,14 +1,12 @@
-local StHoriz = require "roomgen.StHoriz"
+local StStandard = require "roomgen.StStandard"
 local RoomUtils = require "roomgen.RoomUtils"
-local StCeil =  Class.create("StCeil", StHoriz)
+local StCeil =  Class.create("StCeil", StStandard)
 
 function StCeil:makeStructure(left, top,width, height,centX,centY ,reverse )
-	self.groundLevel = centY + 6
-	self:addGround(centX, centY,8, 8,centX,centY ,false )
-	self:addCeilHole(centX, centY,8, 8,centX,centY ,false , 8  )
+	self:addBottomWall(centX, centY,8, 8,centX,centY ,false )
 
 	self.minX = self.x
-	self.maxX = self.x + 8
+	self.maxX = self.x 
 	self.minY = self.y
 	self.maxY = self.y 
 	self.structType = "StCeil"

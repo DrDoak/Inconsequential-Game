@@ -25,6 +25,7 @@ function ObjWorldManager:onRoomLoad( roomName, prevRoomName )
 	self.timeInRoom = 0
 	self.currentRoom = roomName
 	self.spawnZones[roomName] = {}
+	-- lume.trace(roomName, prevRoomName)
 	if not self.worldMapCreated then
 		self:createWorldMap(roomName)
 	end
@@ -73,7 +74,8 @@ end
 function ObjWorldManager:createWorldMap( startingRoom )
 	self.map = {}
 	self.worldMapCreated = true
-	self:processRoom(startingRoom)
+	-- lume.trace(startingRoom)
+	-- self:processRoom(startingRoom)
 end
 
 function ObjWorldManager:processRoom( roomName )
@@ -81,6 +83,7 @@ function ObjWorldManager:processRoom( roomName )
 		local roomInfo = {}
 		roomInfo.connectedRooms = {}
 		roomInfo.exits = {}
+		lume.trace(roomName)
 		local newMap = STI.new(roomName)
 		self.map[roomName] = roomInfo
 
@@ -327,5 +330,54 @@ end
 
 function ObjWorldManager:getCharacters()
 	local entities = Game:findObjects()
+end
+
+function ObjWorldManager:setWorldGen( worldgen )
+	self.worldGen = worldgen
+end
+
+function ObjWorldManager:respawnFromDeath(character)
+	-- character.body:setLinearVelocity(0, 400)
+	-- local x = Game.savedata["last_X"]
+	-- local y = Game.savedata["last_Y"]
+	-- -- lume.trace(Game.savedata["last_room"])
+	-- self:loadRoom(Game.savedata["last_room"])
+	-- character:setPosition(x,y)
+	-- local function respawn( player, count )
+	-- 	player:changeAnimation("crouch")
+	-- 	player.invincibleTime = 2
+	-- 	player:setSprColor(255,255,255,count * 2)
+	-- 	player.body:setLinearVelocity(0,1)
+	-- 	if count >= 80 then
+	-- 		player:setSprColor(255,255,255,255)
+	-- 		player.exit = true
+	-- 	end
+	-- end
+	-- character.health = character.max_health
+	-- character:setSpecialState(respawn,false,true)
+end
+
+function ObjWorldManager:loadRoom( name , dir, prevX, prevY,newX,newY)
+	-- local function loadRoom( player, count )
+	-- 	player.invincibleTime = 2
+	-- 	player.body:setLinearVelocity(0,0)
+	-- 	if count >= 128 then
+	-- 		if self.worldGen then
+	-- 			self.worldGen:loadRoom(name , dir, prevX, prevY,newX,newY)
+	-- 		else
+	-- 			Game:loadRoom(name) 
+	-- 		end
+	-- 	end
+	-- end
+	-- Game.player:setSpecialState(loadRoom)
+	--self:fade(1)
+	--self:flash(1)
+
+	if self.worldGen then
+		lume.trace(name)
+		self.worldGen:loadRoom(name , dir, prevX, prevY,newX,newY)
+	else
+		Game:loadRoom(name) 
+	end
 end
 return ObjWorldManager

@@ -32,7 +32,7 @@ function Room:init( wth,hgt , name)
 	self:addRoomProperty("roomName", name)
 	self:addRoomProperty("maxX", wth )
 	self:addRoomProperty("maxY", hgt )
-	self:addRoomProperty("use_lights","true")
+	-- self:addRoomProperty("use_lights","true")
 	-- self:addRoomProperty("script", "BkgHetairoi" )
 
 	self.lastGid = 1
@@ -362,6 +362,10 @@ end
 function Room:addJumpThru( polyline )
 	-- body
 end
+
+function Room:addWallLink( polyline,fillBottom,themeTable,tileset,jumpThru, stairs)
+	self:addWall(0,0,polyline,jumpThru,stairs) 
+end
 function Room:addSlopes( polyline,fillBottom,themeTable,tileset,jumpThru, stairs)
 	self:addWall(0,0,polyline,jumpThru,stairs) 
 	-- util.print_table(polyline)
@@ -520,25 +524,25 @@ function Room:addSlopes( polyline,fillBottom,themeTable,tileset,jumpThru, stairs
 end
 
 function Room:addEnclosedArea(polyline,themeTable,tileset)
+	-- lume.trace("+++++++++++++++")
 	local newPolyLine = util.deepcopy(polyline)
 	table.insert(newPolyLine,polyline[1])
 	self:addWall(0,0,newPolyLine,false) 
 	local length = table.getn(polyline)
-	local minYIndex = 0
+	local minYIndex = 1
 	local minHeight = 9999
-	local minY = 9999
-	local minX = 9999
-	local maxY = 0
-	local maxX = 0
+	local minY = polyline[1].y
+	local minX = polyline[1].x
+	local maxY = polyline[1].y
+	local maxX = polyline[1].x
 	local currentBlock = self.lookUp["block"]
 	for i,v in ipairs(polyline) do
 		-- lume.trace('eval')
 		-- lume.trace(v.y < minHeight)
 		-- lume.trace(i < length)
-		-- lume.trace(v.y)
+		-- lume.trace(v.x)
+		-- util.print_table(polyline[i+1])
 		if (v.y < minHeight and i < length and polyline[i+1].x ~= v.x) then
-			-- lume.trace("new Low")
-			-- lume.trace(i)
 			minYIndex = i
 			minHeight = v.y
 		end
@@ -566,8 +570,6 @@ function Room:addEnclosedArea(polyline,themeTable,tileset)
 	-- First, mark all Edge columns
 	-- util.print_table(polyline)
 	while numVisited <= length do 
-		-- lume.trace(currIndex)
-		-- util.print_table(polyline[currIndex])
 		local currCoord = polyline[currIndex] -- Initialize current Coordinate and next
 
 		local nextCoord = {}

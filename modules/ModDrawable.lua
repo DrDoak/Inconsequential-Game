@@ -126,7 +126,7 @@ function ModDrawable:updateSprites()
 		if spr.noLoop == false then
 			self:changeAnimation(spr.currentAnim )
 		end
-		Game.scene:move(spr,self.y + (spr.zDiff or 0))
+		Game.scene:move(spr,(self.depth or self.y) + (spr.zDiff or 0))
 	end
 	self:setSprPos(self.x,self.y + 29 + math.floor(self.vHeight/2))
 end

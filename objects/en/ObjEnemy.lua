@@ -36,8 +36,6 @@ function ObjEnemy:create()
 	self:addSpritePiece(require("assets.spr.scripts.SprHeadGeneric"))
 	self:addSpritePiece(require("assets.spr.scripts.SprHatHelmet"))
 
-	self:setDepth(self.depth or 5000)
-
 	self:createBody( "dynamic" ,true, true)
 	self.shape = love.physics.newRectangleShape(7, 16)
 	self.fixture = love.physics.newFixture(self.body, self.shape, 1)

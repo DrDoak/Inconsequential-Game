@@ -12,7 +12,7 @@ end
 
 function HtStarting:makeStructure( centX, centY )
 	StPredef.makeStructure(self,centX,centY)
-	self.room:addRectangleObj("lvl.ObjAnchor",self.centX - 1,self.centY - 2,2,2,{isActive = true})
+	-- self.room:addRectangleObj("lvl.ObjAnchor",self.centX - 1,self.centY - 2,2,2,{isActive = true})
 	local botwall = {{ x = 0, y = 0 },
 				{ x = self.width, y = 0 },
 				{ x = self.width, y = 4},

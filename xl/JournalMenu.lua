@@ -67,7 +67,7 @@ function JournalMenu:draw()
 	loveGraphics.setFont( font )
 	for k=1,numItems do
 		local text = self.items[k].text
-		local learned = Game.WorldManager.Journal[text]
+		local learned = Game.worldManager.Journal[text]
 		local width = font:getWidth( text )
 		local x
 		if self.position == "left" then
@@ -111,13 +111,13 @@ function JournalMenu:keypressed( key, isrepeat )
 		--first move the index one upward
 		self.index = self.index > 1 and self.index - 1 or #self.items
 		--keep flipping through the index until you find something that is learned
-		while (not Game.WorldManager.Journal[self.items[self.index].text]) do
+		while (not Game.worldManager.Journal[self.items[self.index].text]) do
 			self.index = self.index > 1 and self.index - 1 or #self.items
 		end
 	end
 	if Keymap.check( "down", key ) then
 		self.index = self.index < #self.items and self.index + 1 or 1
-		while (not Game.WorldManager.Journal[self.items[self.index].text]) do
+		while (not Game.worldManager.Journal[self.items[self.index].text]) do
 			self.index = self.index < #self.items and self.index + 1 or 1
 		end
 	end

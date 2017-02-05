@@ -1,10 +1,9 @@
-local Structure = require "roomgen.Structure"
-local StHoriz = require "roomgen.StHoriz"
+local StStandard = require "roomgen.StStandard"
 local RoomUtils = require "roomgen.RoomUtils"
-local StStop =  Class.create("StStop", StHoriz)
+local StStop =  Class.create("StStop", StStandard)
 
 function StStop:init( room , evalArea,number,roomgen)
-	StHoriz.init(self,room,evalArea,number,roomgen)
+	StStandard.init(self,room,evalArea,number,roomgen)
 	self.height = 8
 	self.gap = 4
 	self.width = 20
@@ -14,48 +13,12 @@ function StStop:init( room , evalArea,number,roomgen)
 end
 
 function StStop:makeStructure(left, top,width, height,centX,centY ,reverse )
-	self.x = centX 
-	self.y = centY
-	local converted
-	local topWall = {{x=0,y=0},{x=8,y=0}}
-	converted = RoomUtils.offset(topWall,self.x, self.y)
-	converted = RoomUtils.toAbsCoords(converted)
-	self.room:addSlopes( converted,false,nil,nil,true)
+	self:addLeftWall(centX, centY,8, 8,centX,centY ,reverse )
 
-	converted = RoomUtils.offset(topWall,self.x, self.y + 6)
-	converted = RoomUtils.toAbsCoords(converted)
-	self.room:addSlopes( converted,false,nil,nil,true)
-
-	local midWall = {{x=0,y=0},{x=4,y=0}}
-	if reverse then
-		converted = RoomUtils.offset(midWall,self.x, self.y + 3)
-	else
-		converted = RoomUtils.offset(midWall,self.x + 4, self.y + 3)
-	end
-	converted = RoomUtils.toAbsCoords(converted)
-	self.room:addSlopes( converted,false,nil,nil,true)
-
-	local sideWall = {{ x = 0, y = 0},
-				{ x = 2, y = 0},
-				{ x = 2, y = 8},
-				{ x = 0, y = 8 }}
-	if reverse then
-		converted = RoomUtils.offset(sideWall,self.x+6,self.y)
-		self:addZone("rightSide",self.x + 6, self.y,self.x + 6, self.y + 8,1)
-		self:addZone("side",self.x + 6, self.y,self.x + 6, self.y + 8,1)
-	else
-		converted = RoomUtils.offset(sideWall,self.x,self.y)
-		self:addZone("leftSide",self.x + 2, self.y,self.x + 2, self.y + 8,1)
-		self:addZone("side",self.x + 2, self.y,self.x + 2, self.y + 8,1)
-	end
-	converted = RoomUtils.toAbsCoords(converted)
-	self.room:addEnclosedArea(converted)
-
-
-	self.minX = centX
-	self.maxX = centX
-	self.minY = centY
-	self.maxY = centY
+	self.minX = self.x
+	self.maxX = self.x 
+	self.minY = self.y
+	self.maxY = self.y 
 	self:fillPositions()
 end 
 

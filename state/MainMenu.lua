@@ -13,12 +13,12 @@ local Items = {
 	-- 	args = { 1 },
 	-- },
 	{
-		text = "Debug Room 1",
+		text = "Random Generation Test",
 		action = goto_room,
-		args = { "assets/rooms/testRoomTD" },
+		args = { "assets/rooms/Randgen_test" },
 	},
 	{
-		text = "Debug Room 2",
+		text = "Debug Room 1",
 		action = goto_room,
 		args = { "assets/rooms/testRoomTD" },
 	},

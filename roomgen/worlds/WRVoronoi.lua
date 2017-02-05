@@ -192,10 +192,10 @@ local function getRandTheme()
 end
 
 local function pregenFunct( roomgen )
-	roomgen.room:addRoomProperty("use_lights", "true" )
+	-- roomgen.room:addRoomProperty("use_lights", "true" )
 	roomgen.baseTheme = getRandTheme()
 	roomgen.otherTheme = getRandTheme()
-	roomgen:setBackground("BkgHetairoi")
+	-- roomgen:setBackground("BkgHetairoi")
 end
 
 WRVoronoi:setPreGenFunct(pregenFunct)

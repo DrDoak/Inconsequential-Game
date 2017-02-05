@@ -101,7 +101,7 @@ function IST:keypressed( key, isrepeat )
 			local name
 			if item then
 				name = item.name
-				-- Game.WorldManager:setJournal(name, true) 
+				-- Game.worldManager:setJournal(name, true) 
 			else
 				name = "Empty Slot"
 			end

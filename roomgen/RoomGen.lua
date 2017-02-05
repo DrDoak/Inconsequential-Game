@@ -37,29 +37,28 @@ function RoomGen:init(wth,hgt,name,worldX,worldY,embelishFunct,objFunct,enemyFun
 end
 function RoomGen:generate()
 	lume.trace("Starting Room Generation for ", self.name)
-
 	self:generateAllPaths()
  	self.exits = RoomUtils.identifyAll(self.evalArea,"exit")
-	--self:addExitStructs()
 
 	-- util.print_table(self.evalArea)
-	local numberTries = 0
 	self:identifyCornerStructs()
 
 	self:addCorners()
-	--lume.trace("Corners added")
+	-- lume.trace("Corners added")
 	--util.print_table(self.evalArea)
 
 	-- lume.trace("starting to add corner structs")
 	--self:addCornerStructs()
 	-- lume.trace("starting to add extra structs")
 	-- util.print_table(self.evalArea)
+
 	self:addExtraStructs()
-	self:fillEmpty()
-	--self:finishPaths()
-	self.room:drawAllEdgeMaps()
-	self.roomGenerated = true
+	-- self:fillEmpty()
+
+	self:finishPaths()
+	-- self.room:drawAllEdgeMaps()
 	--self:finishEnemies()
+	self.roomGenerated = true
 	lume.trace("Room successfully generated")
 end
 
@@ -67,9 +66,9 @@ function RoomGen:loadRoom( x,y )
 	if not self.roomGenerated then
 		self:generate()
 	end
-	Game.WorldManager.worldX = self.worldX
-	Game.WorldManager.worldY = self.worldY
-	Game.WorldManager.evalArea = self.evalArea
+	Game.worldManager.worldX = self.worldX
+	Game.worldManager.worldY = self.worldY
+	Game.worldManager.evalArea = self.evalArea
 	if x then
 		self.room:loadRoom(x,y)
 	else
@@ -170,12 +169,12 @@ end
 function RoomGen:setDefaultStructs()	
 	self:appendStructToList("horizontal","StHoriz")
 
-	self:appendStructToList("vertical","structs.VtJumpsSolid") 
-	self:appendStructToList("vertical","structs.VtDrops") 
-	self:appendStructToList("vertical","structs.VtStairway") 
+	-- self:appendStructToList("vertical","structs.VtJumpsSolid") 
+	-- self:appendStructToList("vertical","structs.VtDrops") 
+	-- self:appendStructToList("vertical","structs.VtStairway") 
 	-- self:appendStructToList("vertical","structs.VtJumpsSmall") 
 	self:appendStructToList("vertical","StVert")
-	self:appendStructToList("vertical","structs.VtJumps") 
+	-- self:appendStructToList("vertical","structs.VtJumps") 
 	self:appendStructToList("cornerHV","StCornerHV") 
 	self:appendStructToList("cornerVH","StCornerVH") 
 	self:appendStructToList("slope","StSlope") 
@@ -250,7 +249,8 @@ function RoomGen:addStruct( newStruct, x, y,width, height,centX,centY ,reverse ,
 	end
 	newStruct:makeStructure(x, y,width, height,centX,centY ,reverse)
 	-- lume.trace("added struct of type: ", newStruct.structType)
-	if self.embelishFunct then self.embelishFunct(self,newStruct) end
+	if self.embelishFunct then 
+		self.embelishFunct(self,newStruct) end
 	if self.objFunct then self.objFunct(self,newStruct) end
 	if self.enemyFunct and newStruct.structType ~= "StFiller" then self.enemyFunct(self,newStruct) end
 end
@@ -658,7 +658,7 @@ function RoomGen:addExit( x , y , goal, goalX, goalY, direction, pathName)
 	-- util.print_table(self.paths)
 
 	local area = self:getAvaliableArea(evalX, evalY,self.evalArea)
-	lume.trace("adding exit at location: ", evalX," , ", evalY)
+	-- lume.trace("adding exit at location: ", evalX," , ", evalY)
 		--util.print_table(v)
 	--lume.trace("Exit Goal: " , goal)
 	local props
@@ -1014,8 +1014,10 @@ function RoomGen:randomEnemy(enemyList, struct)
 	-- lume.trace(#struct.zones["ground"])
 	for i,v in ipairs(enemyList) do
 		-- lume.trace((self.hardestEnemy >= v.value))
+		-- util.print_table(v)
+		-- lume.trace(v.value)
 		-- lume.trace((not v.minArea or v.minArea > #struct.zones["ground"]))
-		if (self.hardestEnemy >= v.value) and (not v.minArea or v.minArea > #struct.zones["ground"]) then
+		if ((self.hardestEnemy or 100) >= v.value) and (not v.minArea or v.minArea > #struct.zones["ground"]) then
 			local entry = {}
 			entry.weight = v.weight or 10
 			totalWeight = totalWeight + v.probabilityWeight
@@ -1035,7 +1037,7 @@ function RoomGen:randomEnemy(enemyList, struct)
 		-- lume.trace(v.weight)
 		if totalRand >= randVal then
 			lume.trace("Placing enemy of type: ")
-			--struct:placeEnemyGroup(v.enemies,v.value)
+			struct:placeEnemyGroup(v.enemies,v.value)
 			return
 		end
 	end

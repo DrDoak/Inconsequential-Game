@@ -241,11 +241,12 @@ local LightScene_mt = {
 			local prev_canvas = love.graphics.getCanvas()
 			-- prepare for lighting
 			love.graphics.setCanvas(self._canvas)
-			self._canvas:clear(unpack(self._dark))
+			love.graphics.clear()
+			-- self._canvas:clear(unpack(self._dark))
 			love.graphics.setShader( LightShader )
 			LightShader:send("bright", 255 / 255)
 			LightShader:send("dark", 10 / 255)
-			love.graphics.setBlendMode("additive")
+			love.graphics.setBlendMode("add")
 			
 			-- draw lights
 			for k,v in pairs(self._lights) do
@@ -265,8 +266,9 @@ local LightScene_mt = {
 	overlay = function ( self, x, y, force )
 		x,y = x or 0, y or 0
 		if self.enabled or force then
-			love.graphics.setBlendMode("multiplicative")
+			love.graphics.setBlendMode("multiply")
 			love.graphics.draw(self._canvas, x, y)
+			local blendMode = love.graphics.getBlendMode()
 			love.graphics.setBlendMode("alpha")
 		end
 	end,

@@ -54,8 +54,6 @@ function ObjChar:create()
 	self:addSpritePiece(require("assets.spr.scripts.SprBodyUniform"))
 	self:addSpritePiece(require("assets.spr.scripts.SprHeadGeneric"))
 	self:addSpritePiece(require("assets.spr.scripts.SprHatHelmet"))
-
-	self:setDepth(self.depth or 5000)
 	
 	--if set to true, the game will maintain a hitbox that displays "!" when
 	-- near an interactable object (NOT IMPLEMENTED)
@@ -84,10 +82,10 @@ function ObjChar:die()
 	local function death( player, frame )
 		lume.trace(frame)
 		if frame == 1 then
-			Game.WorldManager:fade(2)
+			Game.worldManager:fade(2)
  			Game.savedata["count_deaths"] = Game.savedata["count_deaths"] + 1
 		elseif frame > 120 then
-			Game.WorldManager:respawnFromDeath(self)
+			Game.worldManager:respawnFromDeath(self)
 			player.exit = true
 		end
 	end

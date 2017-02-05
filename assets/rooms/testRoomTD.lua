@@ -8,7 +8,7 @@ return {
   height = 50,
   tilewidth = 32,
   tileheight = 32,
-  nextobjectid = 35,
+  nextobjectid = 37,
   properties = {},
   tilesets = {
     {
@@ -18,7 +18,7 @@ return {
       tileheight = 32,
       spacing = 0,
       margin = 0,
-      image = "../tiles/exampleTD.png",
+      image = "../tile/exampleTD.png",
       imagewidth = 320,
       imageheight = 96,
       transparentcolor = "#000000",
@@ -419,12 +419,25 @@ return {
         {
           id = 34,
           name = "testEnemy",
-          type = "ObjEnemy",
+          type = "en.ObjEnemy",
           shape = "rectangle",
           x = 424,
           y = 280,
           width = 0,
           height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 35,
+          name = "",
+          type = "lvl.ObjVWall",
+          shape = "rectangle",
+          x = 96,
+          y = 344,
+          width = 152,
+          height = 16,
           rotation = 0,
           visible = true,
           properties = {}

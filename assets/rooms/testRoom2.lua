@@ -18,7 +18,7 @@ return {
       tileheight = 32,
       spacing = 0,
       margin = 0,
-      image = "../tiles/exampleTD.png",
+      image = "../tile/exampleTD.png",
       imagewidth = 320,
       imageheight = 96,
       transparentcolor = "#000000",

@@ -12,7 +12,7 @@ function ModRoomChanger:setOneTime( oneTime )
 end
 function ModRoomChanger:changeRoom( character ,room)
 	room = room or self.nextRoom
-	-- if character:getTimeInRoom() > 0.1 then
+	--if character:getTimeInRoom() > 0.1 then
 		local x,y = character.body:getPosition()
 		local nextX = x
 		if self.nextX then
@@ -29,13 +29,14 @@ function ModRoomChanger:changeRoom( character ,room)
 		Game.worldManager:moveCharacter(character,name)
 
 		if character:hasModule("ModControllable") then
-			Game:loadRoom( name )
+			lume.trace()
+			self:playerChangeRoom( character )
 		end
 
 		if self.RoomChangeTemp then
 			Game:del(self)
 		end
-	-- end
+	--end
 end
 
 function ModRoomChanger:setRoomChangeOnCollide( roomChange )
@@ -48,4 +49,25 @@ function ModRoomChanger:onCollide(other, collision)
 	end
 end
 
+function ModRoomChanger:playerChangeRoom(other)
+	lume.trace(other.type)
+	if other:hasModule("ModCharacter") then
+		local player = Game.player
+		lume.trace()
+		Log.debug("ObjLevelChanger detected collision with ObjChar")
+		local x,y = other.body:getPosition()
+		local newX = self.newX and tonumber(self.newX)* 16 or x
+		local newY = self.newY and tonumber(self.newY) * 16 or y
+		other:setPosition( newX, newY )
+		-- Gamestate.push( FadeState, {0,0,0,0}, {0,0,0,255},0.3)
+		local name = self.nextRoom
+		if string.sub(self.nextRoom,1,6) ~= "assets" then
+			name = "assets/rooms/"..self.nextRoom
+		end
+		Game.worldManager:loadRoom( name, self.dir ,self.prevX, self.prevY,newX,newY)
+		if self.temp then
+			Game:del(self)
+		end
+	end
+end
 return ModRoomChanger
