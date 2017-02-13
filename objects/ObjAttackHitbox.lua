@@ -61,7 +61,7 @@ function ObjAttackHitbox:create()
 	self.fixture:setSensor(true)
 	self.objectsHit = {}
 	self.refresh = 0
-	--self.fixtureDRAW = xl.SHOW_HITBOX(self.fixture)
+	-- self.fixtureDRAW = xl.SHOW_HITBOX(self.fixture)
 	-- lume.trace(self.guardDamage)
 end
  
@@ -162,7 +162,6 @@ function ObjAttackHitbox:onCollide(other, collision)
 						self.forceY = math.sin(angle) * self.forceX
 					end
 				end
-				-- lume.trace(self.guardDamage)
 				local hitType = other:setHitState({stun=self.stun,forceX=self.forceX,forceY=self.forceY
 					,damage=self.damage,element=self.element,faction=self.faction,hitbox=self,unblockable=self.unblockable,attacker=self.attacker})
 				if util.hasValue(hitType,"hit") or util.hasValue(hitType,"blocked") then

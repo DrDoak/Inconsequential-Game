@@ -31,13 +31,26 @@ function ModDash:controlDash()
 
 		self.invincibleTime = 15
 		self.dashVel = {}
-		if self.dir == -1 or self.dir == 1 then
-			self.dashVel.x = (12 * 32 * self.dir)
+		local dashDir = self.dir
+		if Keymap.isDown("left") then
+			dashDir = -1
+		end
+		if Keymap.isDown("right") then
+			dashDir = 1
+		end
+		if Keymap.isDown("up") then
+			dashDir = 0
+		end
+		if Keymap.isDown("down") then
+			dashDir = 2
+		end 
+		if dashDir == -1 or dashDir == 1 then
+			self.dashVel.x = (12 * 32 * dashDir)
 			self.dashVel.y = 0
-		elseif self.dir == 0 then
+		elseif dashDir == 0 then
 			self.dashVel.x = 0
 			self.dashVel.y = -12 * 32
-		elseif self.dir == 2 then
+		elseif dashDir == 2 then
 			self.dashVel.x = 0
 			self.dashVel.y = 12 * 32
 		end

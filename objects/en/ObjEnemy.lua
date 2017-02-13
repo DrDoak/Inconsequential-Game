@@ -22,14 +22,17 @@ end
 function ObjEnemy:create()
 	ObjBaseUnit.create(self)
 
-	self:addModule(require "modules.ModProjectileEnemy")
-	self:setAttackRangeRate(80,1)
+	if math.random(1,2) == 1 then
+		self:addModule(require "modules.ModProjectileEnemy")
+	else
+		self:addModule(require "modules.ModMeleeEnemy")
+	end
+	self:setAttackRangeRate(1,1)
 	
 	-- self:setMeleeHitbox({width = 60, height = 15,xOffset = 10, yOffset = -5, damage = 15, guardDamage = 12,
 	-- stun = 35, persistence = 0.15,xKnockBack = 4 * 32, yKnockBack = -3 * 32, element = "fire"})
 	-- self:setFrameData(8,10,10)
 	-- self:setAttackAnimation("slash")
-
 
 	self:addSpritePiece(require("assets.spr.scripts.SprLegBoots"))
 	self:addSpritePiece(require("assets.spr.scripts.SprBodyUniform"))

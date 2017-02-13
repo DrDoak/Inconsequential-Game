@@ -66,7 +66,7 @@ function ModCharacter:normalAnimation( )
 	local maxSpeed, maxSpeedY = self.maxSpeedX, self.maxSpeedY
 	local walkanim = math.abs(4 / self.velX)
 	local newVelX = self.velX - self.referenceVelX
-	local newVelY = (self.velY - self.referenceVelY) * 1.4
+	local newVelY = (self.velY - self.referenceVelY) * 1.7
 	local newVel = math.sqrt(math.pow(newVelX,2) + math.pow(newVelY,2))
 
 	if self.isMovingX or self.isMovingY then

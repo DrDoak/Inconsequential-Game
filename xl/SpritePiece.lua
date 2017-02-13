@@ -55,6 +55,9 @@ function SpritePiece:updateAttach( updateTable )
 				self.attachPoints["default"].start = 1
 				self.attachPoints["default"].attachF = 0
 			else
+				if not self.attachPoints[pointID] then
+					lume.trace("could not index attachPoints", pointID, "from", self.name)
+				end
 				self.attachPoints[pointID].attachMod = pointTable
 				--self.attachPoints[pointID].attachF = 1
 				self.attachPoints[pointID].start = 2

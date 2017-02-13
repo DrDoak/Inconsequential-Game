@@ -49,7 +49,6 @@ function xl.SHOW_HITBOX (hbox)
 		local floor = math.floor
 		local ok, shape = pcall(hbox.getShape, hbox)
 		if not ok then
-			lume.trace()
 			Game.scene:remove( node )
 		else
 			local bx,by = hbox:getBody():getPosition()

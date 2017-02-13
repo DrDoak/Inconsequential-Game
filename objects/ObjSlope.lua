@@ -10,7 +10,7 @@ function ObjSlope:create()
 
 	self:setFixture(self.shape, 1)
 	-- self.slope = self.slope
-	self.fixture:setSensor(true)
+	-- self.fixture:setSensor(true)
 end
 
 

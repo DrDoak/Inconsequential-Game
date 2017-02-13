@@ -79,10 +79,14 @@ function ModControllable:proccessInventory()
 			Game:add(intHitbox)
 		end
 	end
+	
 	if Keymap.isDown("use") then
+		self.meleeTargeting = true
 		if self.currentEquips["neutral"] then
 			self.currentEquips["neutral"]:use()
 		end
+	else
+		self.meleeTargeting = false
 	end
 end
 

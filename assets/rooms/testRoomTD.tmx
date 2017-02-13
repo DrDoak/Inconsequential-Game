@@ -196,7 +196,6 @@
   <object id="31" name="Crate" type="ObjCrate" x="240" y="256" width="32" height="16"/>
   <object id="32" name="Crate" type="ObjCrate" x="416" y="368" width="32" height="16"/>
   <object id="33" name="Crate" type="ObjCrate" x="304" y="368" width="32" height="16"/>
-  <object id="34" name="testEnemy" type="en.ObjEnemy" x="424" y="280"/>
   <object id="35" type="lvl.ObjVWall" x="96" y="344" width="152" height="16"/>
  </objectgroup>
  <objectgroup name="levelChanger"/>

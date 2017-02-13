@@ -11,7 +11,6 @@ local ane = {
 		attachMod = {{"top",{angle=0,x=0,y=0}}},
 		attachUp = {{"top",{angle=0,x=0,y=0,z=1}}},
 		attachDown = {{"top",{angle=0,x=0,y=0,z=1}}}
-
 	},
 	walk = {
 		row = 1,

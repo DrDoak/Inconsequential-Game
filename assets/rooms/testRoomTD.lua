@@ -417,19 +417,6 @@ return {
           properties = {}
         },
         {
-          id = 34,
-          name = "testEnemy",
-          type = "en.ObjEnemy",
-          shape = "rectangle",
-          x = 424,
-          y = 280,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
           id = 35,
           name = "",
           type = "lvl.ObjVWall",

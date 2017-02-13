@@ -65,6 +65,14 @@ local ane = {
 						{"hand1",{angle=0,x=4,y=10,z=1}}},
 		attachUp = {{"neck",{angle=0,x=1,y=-2,z=-1}},
 						{"hand1",{angle=0,x=4,y=10,z=-1}}}
+	},
+	hit = {
+		row = 4,
+		range = 1,
+		delay = 0.1,
+		priority = 1,
+		attachMod = {{"neck",{angle=25,x=7,y=-2}},
+						{"hand1",{angle=340,x=14,y=13}}}
 	}
 }
 

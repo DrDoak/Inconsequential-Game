@@ -148,7 +148,7 @@ function Structure:placeEnemy( enemyType, params,zone, value)
 end
 
 function Structure:placeEnemyGroup( enemyTable, totalWeight )
-	lume.trace("Placing enemy in struct: ", self.structType)
+	--lume.trace("Placing enemy in struct: ", self.structType)
 	self.enemyValue = self.enemyValue + totalWeight
 	-- lume.trace(self.structType)
 	self.roomgen.enemyValue = self.roomgen.enemyValue + totalWeight

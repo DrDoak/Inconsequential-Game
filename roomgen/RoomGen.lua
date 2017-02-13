@@ -1009,8 +1009,8 @@ end
 function RoomGen:randomEnemy(enemyList, struct)
 	local probs = {}
 	local totalWeight = 1
-	lume.trace("Adding random Enemy")
-	lume.trace(self.hardestEnemy)
+	-- lume.trace("Adding random Enemy")
+	-- lume.trace(self.hardestEnemy)
 	-- lume.trace(#struct.zones["ground"])
 	for i,v in ipairs(enemyList) do
 		-- lume.trace((self.hardestEnemy >= v.value))
@@ -1021,13 +1021,13 @@ function RoomGen:randomEnemy(enemyList, struct)
 			local entry = {}
 			entry.weight = v.weight or 10
 			totalWeight = totalWeight + v.probabilityWeight
-			lume.trace("adding weight: ", v.probabilityWeight, "to make: ", totalWeight)
+			-- lume.trace("adding weight: ", v.probabilityWeight, "to make: ", totalWeight)
 			entry.value = v.value or 10
 			entry.enemies = v.enemies
 			table.insert(probs,entry)
 		end
 	end
-	lume.trace("total weight is" , totalWeight)
+	-- lume.trace("total weight is" , totalWeight)
 	local randVal = Game.genRand:random(1,totalWeight)
 	local totalRand = 0
 	-- lume.trace(totalWeight, "val: ", randVal)
@@ -1036,7 +1036,7 @@ function RoomGen:randomEnemy(enemyList, struct)
 		totalRand = totalRand + v.weight
 		-- lume.trace(v.weight)
 		if totalRand >= randVal then
-			lume.trace("Placing enemy of type: ")
+			-- lume.trace("Placing enemy of type: ")
 			struct:placeEnemyGroup(v.enemies,v.value)
 			return
 		end

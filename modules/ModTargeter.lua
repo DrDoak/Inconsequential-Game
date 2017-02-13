@@ -9,16 +9,22 @@ end
 function ModTargeter:setTarget( obj )
 	if obj then
 		-- lume.trace("slowing down", self.lockOnSlow)
-		self.speedModX = self.speedModX + self.lockOnSlow
-		self.speedModY = self.speedModY + self.lockOnSlow
+		-- lume.trace(self.previousTargets, #self.previousTargets)
+		if #self.previousTargets == 0 then
+			self.speedModX = self.speedModX + self.lockOnSlow
+			self.speedModY = self.speedModY + self.lockOnSlow
+		end
 		local target = FXReticle(self,obj,self.reticleSprite)
 		Game:add(target)
 		table.insert(self.previousTargets,obj)
 	else
+		if #self.previousTargets > 0 then
+			self.speedModX = self.speedModX - self.lockOnSlow
+			self.speedModY = self.speedModY - self.lockOnSlow
+		end
 		self.previousTargets = {}
 		-- lume.trace("speeding up",self.lockOnSlow)
-		self.speedModX = self.speedModX - self.lockOnSlow
-		self.speedModY = self.speedModY - self.lockOnSlow
+
 	end
 	self.targetObj = obj
 end
@@ -60,10 +66,10 @@ function ModTargeter:findNextTarget()
 	local minScore = 9999999
 	local minObj = nil
 
-	if (self.targetObj) then
-		self.speedModX = self.speedModX - self.lockOnSlow
-		self.speedModY = self.speedModY - self.lockOnSlow
-	end
+	-- if (self.targetObj) then
+	-- 	self.speedModX = self.speedModX - self.lockOnSlow
+	-- 	self.speedModY = self.speedModY - self.lockOnSlow
+	-- end
 
 	for i,obj in ipairs(targets) do
 		if self:validTarget(obj) then

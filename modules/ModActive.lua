@@ -62,6 +62,9 @@ function ModActive:tick( dt )
 	if self.state == 3 then self.jumping = false end
 
 	self:processPassives()
+	-- if self:hasModule("ModControllable") then
+	-- 	lume.trace(self.state,#self.specialStates)
+	-- end
 
 	if self.health <= 0 then
 		self.isAlive = false
@@ -143,7 +146,7 @@ function ModActive:setHitState(hitInfo)
 		self:overrideAnimation("body")
 		self:overrideAnimation("head")
 
-		self.stun = blockStun or stunTime
+		self.stun = 0 --blockStun or stunTime
 		if not self.superArmor then
 			self.body:setLinearVelocity(forceX * ratio,forceY * ratio)
 		end
@@ -164,6 +167,8 @@ function ModActive:setHitState(hitInfo)
 			self:onBlock(hitInfo)
 			return "blocked"
 		else
+			self.state = 3
+			self.statue = "hit"
 			self.stun = st
 			self:setHealth(self.redHealth - dm)
 			if not self.superArmor then
@@ -196,7 +201,9 @@ function ModActive:hitState(dt)
 	if self.stun > 0 then
 		self.stun = self.stun - dt
 	else
-		self:animate()
+		if self:hasModule("ModCharacter") then
+			self:animate()
+		end
 		self:resetAnimation("body")
 		self:resetAnimation("head")
 		self:resetAnimation("legs")

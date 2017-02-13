@@ -14,6 +14,7 @@ function ObjTest:create()
 
 	self:addModule(require "modules.ModDrawable")
 	self:matchBodyToSpr(require("assets.spr.scripts.SprCrate"))
+	self.fixture:setCategory(CL_NPC)
 	self:setMaxHealth(100)
 	self.fixtureDRAW = xl.SHOW_HITBOX(self.fixture)
 end

@@ -23,7 +23,7 @@ function ObjShot:create()
 	--Sprite initialization
 	self.refresh = 30 
 	self.damage = self.damage or 20
-	self.stun = self.stun or 20
+	self.stun = self.stun or 0.1
 	self.range = self.range or 120
 	self.forceX = self.forceX or 12 * 32
 	self.forceY = self.forceY or -6 * 32

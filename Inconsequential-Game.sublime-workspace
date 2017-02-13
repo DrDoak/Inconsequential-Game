@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"onM",
+				"onMeleeAttack"
+			],
+			[
 				"destin",
 				"destinationY"
 			],
@@ -300,47 +304,46 @@
 	"buffers":
 	[
 		{
-			"file": "roomgen/worlds/WRHetairoi.lua",
+			"file": "modules/ModFX.lua",
 			"settings":
 			{
-				"buffer_size": 4580,
+				"buffer_size": 2026,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "roomgen/enLists/normalEnemies.lua",
+			"file": "modules/ModTargetEqp.lua",
 			"settings":
 			{
-				"buffer_size": 214,
+				"buffer_size": 6469,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "\\Searching 184 files for \"addZone\"\n\nC:\\Users\\LuoLei Zhao\\Inconsequential-Game\\roomgen\\Structure.lua:\n  184  end\n  185  \n  186: function Structure:addZone( zoneType, leftX, topY, width, height )\n  187  \tif not self.zones[zoneType] then self.zones[zoneType] = {} end\n  188  \tlocal i = leftX\n\nC:\\Users\\LuoLei Zhao\\Inconsequential-Game\\roomgen\\structs\\VtJumps.lua:\n   34  \t\tself.room:addSlopes(platConvert,false,nil,nil,true)\n   35  \n   36: \t\tself:addZone(\"ground\",\t\tstartX,posY - 6, self.platformWidth,1)\n   37: \t\tself:addZone(\"eyeLevel\",\tstartX,posY - 8,self.platformWidth,1)\n   38  \t\tif posY ~= self.maxY then\n   39: \t\t\tself:addZone(\"ceiling\",\tstartX,posY - 4,self.platformWidth,1)\n   40  \t\tend\n   41  \t\tposY = posY - 8\n\nC:\\Users\\LuoLei Zhao\\Inconsequential-Game\\roomgen\\structs\\VtJumpsSmall.lua:\n   39  \t\tplatConvert2 = RoomUtils.offset(middleWall,self.leftWallPos + self.gap/2,startY2)\n   40  \n   41: \t\tself:addZone(\"ground\",self.leftWallPos + self.gap/2 - 4 - self.platformWidth,startY1 - 2,self.platformWidth,1)\n   42: \t\tself:addZone(\"eyeLevel\",self.leftWallPos + self.gap/2 - 4 - self.platformWidth,startY1 - 4,self.platformWidth,1)\n   43  \t\tif posY ~= self.maxY then\n   44: \t\t\tself:addZone(\"ceiling\",self.leftWallPos + self.gap/2 - 4 - self.platformWidth,startY1,self.platformWidth,1)\n   45  \t\tend\n   46  \n   47: \t\tself:addZone(\"ground\",self.leftWallPos + self.gap/2,startY2 - 2,self.platformWidth,1)\n   48: \t\tself:addZone(\"eyeLevel\",self.leftWallPos + self.gap/2,startY2 - 4,self.platformWidth,1)\n   49  \t\tif posY ~= self.maxY then\n   50: \t\t\tself:addZone(\"ceiling\",self.leftWallPos + self.gap/2,startY2,self.platformWidth,1)\n   51  \t\tend\n   52  \t\tplatConvert1 = RoomUtils.toAbsCoords(platConvert1)\n\nC:\\Users\\LuoLei Zhao\\Inconsequential-Game\\roomgen\\structs\\VtJumpsSolid.lua:\n   46  \t\tself.room:addEnclosedArea(platConvert)\n   47  \n   48: \t\tself:addZone(\"ground\",\t\tstartX,posY - 6, self.platformWidth,1)\n   49: \t\tself:addZone(\"eyeLevel\",\tstartX,posY - 8,self.platformWidth,1)\n   50  \t\tif posY ~= self.maxY then\n   51: \t\t\tself:addZone(\"ceiling\",\tstartX,posY - 4,self.platformWidth,1)\n   52  \t\tend\n   53  \t\tposY = posY - 8\n\n13 matches across 4 files\n",
+			"file": "/C/Users/LuoLei Zhao/NLPGoldenGlobes/NLPGoldenGlobes/interpreter.py",
 			"settings":
 			{
-				"buffer_size": 2153,
-				"line_ending": "Windows",
-				"name": "Find Results",
-				"scratch": true
-			}
-		},
-		{
-			"file": "roomgen/StHole.lua",
-			"settings":
-			{
-				"buffer_size": 648,
+				"buffer_size": 5261,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "roomgen/StCross.lua",
+			"file": "/C/Users/LuoLei Zhao/NLPGoldenGlobes/NLPGoldenGlobes/phrases.py",
 			"settings":
 			{
-				"buffer_size": 697,
+				"buffer_size": 3669,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/LuoLei Zhao/NLPGoldenGlobes/NLPGoldenGlobes/main.py",
+			"settings":
+			{
+				"buffer_size": 482,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -382,24 +385,72 @@
 	],
 	"file_history":
 	[
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModTargeter.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModDrawable.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModTargetEqp.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/ObjChar.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/roomgen/substructs/SSLargeWindow.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/en/ObjEnemy.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/assets/spr/scripts/SprSlash.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModMelee.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/EqpHandgun.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/ObjAttackHitbox.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/fx/FXSimple.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModFX.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModSpeedZone.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/ObjShot.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModShield.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModMeleeEnemy.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/fx/FXGeneric.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModFollow.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModDash.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/ObjCrate.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/roomgen/Structure.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/roomgen/RoomGen.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModEnemy.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/assets/spr/scripts/SprBodyPeridot.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/assets/spr/scripts/SprHeadPeridot.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/assets/spr/scripts/SprHeadGeneric.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/assets/spr/scripts/SprBodyUniform.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModActive.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/roomgen/worlds/WRHetairoi.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/ObjBaseUnit.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/Error",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModHitboxMaker.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/extra.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModCharacterDetector.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModInventory.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/ObjBase.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModTDObj.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModControllable.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/ObjSlope.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/assets/spr/scripts/SprLegPeridot.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModProjectile.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModPhysics.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModCharacter.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/anim8.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModPartEmitter.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/xl/SpritePiece.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/xl/Sprite.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/SettingManager.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModHasHUD.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/ObjDamageHitbox.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/mixin/Healthbar.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModEquippable.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/roomgen/StCross.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/roomgen/StHole.lua",
+		"/C/Users/LuoLei Zhao/Inconsequential-Game/roomgen/enLists/normalEnemies.lua",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/roomgen/StHoriz.lua",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/roomgen/StVert.lua",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/roomgen/StCeil.lua",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/roomgen/substructs/SSVending.lua",
-		"/C/Users/LuoLei Zhao/Inconsequential-Game/roomgen/RoomGen.lua",
-		"/C/Users/LuoLei Zhao/Inconsequential-Game/roomgen/Structure.lua",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/roomgen/StStandard.lua",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/assets/spr/scripts/SprVWallFence.lua",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/roomgen/structs/VtJumpsSolid.lua",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/roomgen/StStop.lua",
-		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModActive.lua",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/lvl/ObjVWall.lua",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/roomgen/WorldGen.lua",
-		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModEquippable.lua",
-		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModDrawable.lua",
-		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/ObjChar.lua",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/ObjEnemy.lua",
-		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModInventory.lua",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/roomgen/worlds/embellishfuncts.lua",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/lvl/ObjFence.lua",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/roomgen/StCornerHV.lua",
@@ -409,15 +460,9 @@
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/ObjWall.lua",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/roomgen/ExHoriz.lua",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/roomgen/worlds/WRVoronoi.lua",
-		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModControllable.lua",
-		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModEnemy.lua",
-		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/ObjDamageHitbox.lua",
-		"/C/Users/LuoLei Zhao/Inconsequential-Game/roomgen/StHole.lua",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/roomgen/RoomUtils.lua",
-		"/C/Users/LuoLei Zhao/Inconsequential-Game/roomgen/StCross.lua",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/roomgen/ExTop.lua",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/roomgen/ExBottom.lua",
-		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModTargetEqp.lua",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/scripts/rooms/Randgen_testS.lua",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/ObjWorldManager.lua",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/MGame.lua",
@@ -427,7 +472,6 @@
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/assets/rooms/testRoom2.lua",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/assets/rooms/testRoom2.tmx",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModShooter.lua",
-		"/C/Users/LuoLei Zhao/Inconsequential-Game/roomgen/worlds/WRHetairoi.lua",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/xl/Lights.lua",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/roomgen/substructs/SSCeilingLight.lua",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/roomgen/substructs/SSGroundLight.lua",
@@ -447,36 +491,19 @@
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/state/MainMenu.lua",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModAccuracy.lua",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/script/Randgen_testS.lua",
-		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModTargeter.lua",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/xl/Scene.lua",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModTargetable.lua",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModReticle.lua",
-		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModProjectile.lua",
-		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/ObjShot.lua",
-		"/C/Users/LuoLei Zhao/Inconsequential-Game/extra.lua",
-		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModPhysics.lua",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModProjectileEnemy.lua",
-		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModCharacter.lua",
-		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModMeleeEnemy.lua",
-		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/ObjAttackHitbox.lua",
-		"/C/Users/LuoLei Zhao/Inconsequential-Game/ObjBase.lua",
-		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModCharacterDetector.lua",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/assets/spr/scripts/SprShot.lua",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/assets/spr/scripts/SprEnShot.lua",
-		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/EqpHandgun.lua",
-		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModSpeedZone.lua",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/FXShot.lua",
-		"/C/Users/LuoLei Zhao/Inconsequential-Game/Error",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/util.lua",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/FXReticle.lua",
-		"/C/Users/LuoLei Zhao/Inconsequential-Game/SettingManager.lua",
 		"/C/acl100-smp.64/startup.cl",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/assets/spr/scripts/SprHatHelmet.lua",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/assets/spr/scripts/SprCrate.lua",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/ObjIntHitbox.lua",
-		"/C/Users/LuoLei Zhao/Inconsequential-Game/modules/ModPartEmitter.lua",
-		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/ObjCrate.lua",
-		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/ObjBaseUnit.lua",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/ObjCamera.lua",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/assets/spr/scripts/SprHeadUniform.lua",
 		"/C/Users/LuoLei Zhao/Inconsequential-Game/libs/serpent.lua",
@@ -485,31 +512,7 @@
 		"/C/qrg/planb/mt-fact-set.lsp",
 		"/C/qrg/planb/sinference.lsp",
 		"/C/qrg/planb/all-specpred-inf.lsp",
-		"/C/qrg/fire/v3/ask.lsp",
-		"/C/Users/LuoLei Zhao/NLPGoldenGlobes/NLPGoldenGlobes/nltkTest.py",
-		"/C/qrg/HW4.lisp",
-		"/C/qrg/planb/docs/planb.html",
-		"/C/qrg/bps/ltre/rules/empty.lsp",
-		"/C/qrg/bps/ltre/crarules.lsp",
-		"/C/Users/LuoLei Zhao/Inconsequential-Game/objects/ObjRoomChanger.lua",
-		"/C/qrg/bps/ltre/crarith.lsp",
-		"/C/qrg/bps/ltre/marxdata.lsp",
-		"/C/qrg/bps/ltre/linter.lsp",
-		"/C/qrg/bps/ltre/ldata.lsp",
-		"/C/qrg/bps/ltre/ltms.lsp",
-		"/C/qrg/bps-init.lsp",
-		"/C/Users/LuoLei Zhao/GameDevelopmentStudio/.gitignore",
-		"/C/Users/LuoLei Zhao/GameDevelopmentStudio/Assets/Script/Controller2D.cs",
-		"/C/qrg/bps/ltre/rules/crarules.lsp",
-		"/C/qrg/bps/ltre/ltre.lsp",
-		"/C/qrg/bps/ltre/marx.lsp",
-		"/C/qrg/bps/ftre/crarules.lsp",
-		"/C/qrg/bps/ftre/crarith.lsp",
-		"/C/qrg/bps/ftre/problem-5-17a.lsp",
-		"/C/qrg/bps/ftre/myfnd-ex.lsp",
-		"/C/qrg/bps/ftre/ftre.lsp",
-		"/C/Users/defaultuser0/omegalib/firefly/modules/firefly/firefly_config_min_readsnap.py",
-		"/C/qrg/bps/jtre/jtms/homework.lsp"
+		"/C/qrg/fire/v3/ask.lsp"
 	],
 	"find":
 	{
@@ -530,6 +533,92 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"remove_",
+			"queries_set",
+			"winner",
+			"get_host",
+			"stability",
+			"aimSpeed",
+			"critChance",
+			"accuracy",
+			"accura",
+			"self.accur",
+			"lockOnSlow",
+			"width",
+			"fadeSpeed",
+			"FXSimple",
+			"FXGeneric",
+			"setColor",
+			"self.red",
+			"ObjTest",
+			"FXGeneric",
+			"self.attackRange",
+			"tryAttack",
+			"onAttack",
+			"tryAttack",
+			"setHitState",
+			"self.status =",
+			"self.state =",
+			"specialSTate",
+			"setHitSTate",
+			"stun =",
+			"changeanimation",
+			"setHitState",
+			"self.state =",
+			"hitState",
+			"self.stun",
+			"setHitState",
+			"oncollide",
+			"dir",
+			"createhitbox",
+			"hasModu",
+			"queryboundingbox",
+			"matchBodyToSpr",
+			"setSprPos",
+			"+ 16",
+			"modactive",
+			"height",
+			"mClearView",
+			"lume.fn",
+			"wrapDetectInt",
+			"wrapde",
+			"boundingbox",
+			"createHitbox",
+			"onAttack",
+			"setFrameData",
+			"frameData",
+			"fireWeapon",
+			"use",
+			"run",
+			"R",
+			"run",
+			"normalAnimation",
+			"animate",
+			"4",
+			"setHealth",
+			"setColor",
+			"updateSprit",
+			"color",
+			"setColor",
+			"color",
+			"dir",
+			"cur",
+			"16",
+			"update",
+			"moddrawable",
+			"emit",
+			"onHitConfirm",
+			"\"hitFX\"",
+			"onHit",
+			"set",
+			"sethitState",
+			"ratio",
+			"setguard",
+			"setGuard",
+			"onBlock",
+			"invincibleTime",
+			"setHealth",
+			"ObjChar",
 			"addZone",
 			"enFunct",
 			"setDepth",
@@ -571,93 +660,7 @@
 			"ObjLight",
 			"ObjLevelChanger",
 			"standin",
-			"quickStart",
-			"Game.WorldManager",
-			"insertedTargetText",
-			"FXReticle",
-			"reticle",
-			"onEquipTick",
-			"addShadow",
-			"show_hitbox",
-			"xl.fixture",
-			"Scene",
-			"node",
-			"self.height",
-			"height",
-			"onAttack",
-			"ModShooter",
-			"onAttackStart",
-			"tryAttack",
-			"speedMod",
-			"ModCharacterDetector",
-			"characterTrackInfo",
-			"modtargetable",
-			"validTarget",
-			"findNextTarget",
-			"self.currentEquips",
-			"onAttackStart",
-			"canmove",
-			"onAttackStart",
-			"tryAttack",
-			"directToPoint",
-			"moveTopoint",
-			"moveToPoint",
-			"findTarget",
-			"setGoal",
-			"moveToPoint",
-			"turntopoint",
-			"speed",
-			"velocity",
-			"maxSp",
-			"fireWeapon",
-			"use",
-			"initial_room",
-			"util.print_table",
-			"primary",
-			"isPrimary",
-			"primary",
-			"currentEquip",
-			"primary",
-			"isPrimary",
-			"onequip",
-			"neutral",
-			"setEquipCreateItem",
-			"shallow",
-			"Targeter",
-			"target",
-			"character",
-			"ObjworldManager",
-			"world",
-			"animate",
-			"ModDrawableTD",
-			"ModControllableTD",
-			"ObjDebugCamera",
-			"ObjBaseUnitTD",
-			"write_key_value_pair",
-			"make_safe",
-			"ser",
-			"skiplist",
-			"serpent",
-			"verify-ask-arguments",
-			"n-Statements",
-			"statement",
-			"predicate",
-			"self.spritePieceNames",
-			"deletefrom",
-			"self.spritePiece",
-			"delSpritePiece",
-			"self.spritePieceNames",
-			"setSprpos",
-			"self.SpritePieceNames",
-			"spritePieceNames",
-			"1",
-			"carry-for-column",
-			"certain-value",
-			"value-of",
-			"assert",
-			"test-val",
-			"value-of",
-			"certain-value"
+			"quickStart"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -665,6 +668,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"ModFX",
+			"FXSimple",
+			"ModHasHUD",
 			"ObjVWall",
 			"ObjRoomChanger",
 			"Game.worldManager",
@@ -789,10 +795,7 @@
 			"ModPhysics",
 			"ModActive",
 			"BodyObj",
-			"ObjBaseUnit",
-			"speedModifier",
-			"Relationship",
-			"Memory"
+			"ObjBaseUnit"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -808,19 +811,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "roomgen/worlds/WRHetairoi.lua",
+					"file": "modules/ModFX.lua",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4580,
+						"buffer_size": 2026,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3768,
-								3768
+								1443,
+								1443
 							]
 						],
 						"settings":
@@ -829,27 +832,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1336.0,
+						"translation.y": 1298.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "roomgen/enLists/normalEnemies.lua",
+					"file": "modules/ModTargetEqp.lua",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 214,
+						"buffer_size": 6469,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								200,
-								200
+								2524,
+								2524
 							]
 						],
 						"settings":
@@ -858,101 +861,37 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1848.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
+					"file": "/C/Users/LuoLei Zhao/NLPGoldenGlobes/NLPGoldenGlobes/interpreter.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2153,
+						"buffer_size": 5261,
 						"regions":
 						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										146,
-										153
-									],
-									[
-										444,
-										451
-									],
-									[
-										516,
-										523
-									],
-									[
-										624,
-										631
-									],
-									[
-										909,
-										916
-									],
-									[
-										1029,
-										1036
-									],
-									[
-										1187,
-										1194
-									],
-									[
-										1325,
-										1332
-									],
-									[
-										1420,
-										1427
-									],
-									[
-										1553,
-										1560
-									],
-									[
-										1851,
-										1858
-									],
-									[
-										1923,
-										1930
-									],
-									[
-										2031,
-										2038
-									]
-								],
-								"scope": ""
-							}
 						},
 						"selection":
 						[
 							[
-								2015,
-								2015
+								2905,
+								2911
 							]
 						],
 						"settings":
 						{
-							"detect_indentation": false,
-							"line_numbers": false,
-							"output_tag": 1,
-							"result_base_dir": "",
-							"result_file_regex": "^([^ \t].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 750.0,
+						"translation.y": 1359.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -960,58 +899,60 @@
 				},
 				{
 					"buffer": 3,
-					"file": "roomgen/StHole.lua",
+					"file": "/C/Users/LuoLei Zhao/NLPGoldenGlobes/NLPGoldenGlobes/phrases.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 648,
+						"buffer_size": 3669,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								388,
-								388
+								1575,
+								1575
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Lua/Lua.sublime-syntax"
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 785.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "roomgen/StCross.lua",
+					"file": "/C/Users/LuoLei Zhao/NLPGoldenGlobes/NLPGoldenGlobes/main.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 697,
+						"buffer_size": 482,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								228,
-								228
+								394,
+								394
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Lua/Lua.sublime-syntax"
+							"syntax": "Packages/Python/Python.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -1050,7 +991,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 203.0
+		"height": 202.0
 	},
 	"output.find_results":
 	{
@@ -1070,6 +1011,294 @@
 		"selected_items":
 		[
 			[
+				"modtarget",
+				"modules\\ModTargetEqp.lua"
+			],
+			[
+				"mmodtargeteqp",
+				"modules\\ModTargetEqp.lua"
+			],
+			[
+				"targete",
+				"modules\\ModTargeter.lua"
+			],
+			[
+				"objsh",
+				"objects\\ObjChar.lua"
+			],
+			[
+				"targ",
+				"roomgen\\substructs\\SSLargeWindow.lua"
+			],
+			[
+				"objene",
+				"objects\\en\\ObjEnemy.lua"
+			],
+			[
+				"targeter",
+				"modules\\ModTargeter.lua"
+			],
+			[
+				"sprsla",
+				"assets\\spr\\scripts\\SprSlash.lua"
+			],
+			[
+				"objatt",
+				"objects\\ObjAttackHitbox.lua"
+			],
+			[
+				"eqp",
+				"objects\\EqpHandgun.lua"
+			],
+			[
+				"modfx",
+				"modules\\ModFX.lua"
+			],
+			[
+				"moddr",
+				"modules\\ModDrawable.lua"
+			],
+			[
+				"modfolo",
+				"modules\\ModFollow.lua"
+			],
+			[
+				"sprslas",
+				"assets\\spr\\scripts\\SprSlash.lua"
+			],
+			[
+				"fxgen",
+				"objects\\fx\\FXGeneric.lua"
+			],
+			[
+				"objchar",
+				"objects\\ObjChar.lua"
+			],
+			[
+				"obj",
+				"objects\\ObjCrate.lua"
+			],
+			[
+				"fxge",
+				"objects\\fx\\FXGeneric.lua"
+			],
+			[
+				"objcra",
+				"objects\\ObjCrate.lua"
+			],
+			[
+				"objtest",
+				"objects\\ObjShot.lua"
+			],
+			[
+				"dash",
+				"modules\\ModDash.lua"
+			],
+			[
+				"modspee",
+				"modules\\ModSpeedZone.lua"
+			],
+			[
+				"modtar",
+				"modules\\ModTargeter.lua"
+			],
+			[
+				"spr",
+				"assets\\spr\\scripts\\SprBodyPeridot.lua"
+			],
+			[
+				"moden",
+				"modules\\ModEnemy.lua"
+			],
+			[
+				"projec",
+				"modules\\ModProjectileEnemy.lua"
+			],
+			[
+				"sprheadg",
+				"assets\\spr\\scripts\\SprHeadGeneric.lua"
+			],
+			[
+				"modacti",
+				"modules\\ModActive.lua"
+			],
+			[
+				"objcha",
+				"objects\\ObjChar.lua"
+			],
+			[
+				"sprbodyun",
+				"assets\\spr\\scripts\\SprBodyUniform.lua"
+			],
+			[
+				"sprheadp",
+				"assets\\spr\\scripts\\SprHeadPeridot.lua"
+			],
+			[
+				"sprbodyp",
+				"assets\\spr\\scripts\\SprBodyPeridot.lua"
+			],
+			[
+				"objshot",
+				"objects\\ObjShot.lua"
+			],
+			[
+				"draw",
+				"modules\\ModDrawable.lua"
+			],
+			[
+				"modac",
+				"modules\\ModCharacterDetector.lua"
+			],
+			[
+				"objattac",
+				"objects\\ObjAttackHitbox.lua"
+			],
+			[
+				"eqpha",
+				"objects\\EqpHandgun.lua"
+			],
+			[
+				"hitbox",
+				"modules\\ModHitboxMaker.lua"
+			],
+			[
+				"objat",
+				"objects\\ObjAttackHitbox.lua"
+			],
+			[
+				"objbase",
+				"ObjBase.lua"
+			],
+			[
+				"eqph",
+				"objects\\EqpHandgun.lua"
+			],
+			[
+				"sprlegper",
+				"assets\\spr\\scripts\\SprLegPeridot.lua"
+			],
+			[
+				"modtd",
+				"modules\\ModTDObj.lua"
+			],
+			[
+				"moddraw",
+				"modules\\ModDrawable.lua"
+			],
+			[
+				"peridot",
+				"assets\\spr\\scripts\\SprLegPeridot.lua"
+			],
+			[
+				"objslop",
+				"objects\\ObjSlope.lua"
+			],
+			[
+				"contr",
+				"modules\\ModControllable.lua"
+			],
+			[
+				"eqphandgun",
+				"objects\\EqpHandgun.lua"
+			],
+			[
+				"sprlegpe",
+				"assets\\spr\\scripts\\SprLegPeridot.lua"
+			],
+			[
+				"modmele",
+				"modules\\ModMelee.lua"
+			],
+			[
+				"modmel",
+				"modules\\ModMelee.lua"
+			],
+			[
+				"modtargeteq",
+				"modules\\ModTargetEqp.lua"
+			],
+			[
+				"modcontr",
+				"modules\\ModControllable.lua"
+			],
+			[
+				"modcont",
+				"modules\\ModControllable.lua"
+			],
+			[
+				"charac",
+				"modules\\ModCharacter.lua"
+			],
+			[
+				"sprhead",
+				"assets\\spr\\scripts\\SprHeadPeridot.lua"
+			],
+			[
+				"sprle",
+				"assets\\spr\\scripts\\SprLegPeridot.lua"
+			],
+			[
+				"headperi",
+				"assets\\spr\\scripts\\SprHeadPeridot.lua"
+			],
+			[
+				"modactive",
+				"modules\\ModActive.lua"
+			],
+			[
+				"sprite",
+				"xl\\Sprite.lua"
+			],
+			[
+				"settingm",
+				"SettingManager.lua"
+			],
+			[
+				"modprojec",
+				"modules\\ModProjectile.lua"
+			],
+			[
+				"modproj",
+				"modules\\ModProjectile.lua"
+			],
+			[
+				"shi",
+				"modules\\ModShield.lua"
+			],
+			[
+				"modpartem",
+				"modules\\ModPartEmitter.lua"
+			],
+			[
+				"modactiv",
+				"modules\\ModActive.lua"
+			],
+			[
+				"active",
+				"modules\\ModActive.lua"
+			],
+			[
+				"objdamagehit",
+				"objects\\ObjDamageHitbox.lua"
+			],
+			[
+				"modprj",
+				"modules\\ModProjectile.lua"
+			],
+			[
+				"modchar",
+				"modules\\ModCharacter.lua"
+			],
+			[
+				"healthbar",
+				"mixin\\Healthbar.lua"
+			],
+			[
+				"modhud",
+				"modules\\ModHasHUD.lua"
+			],
+			[
 				"sthori",
 				"roomgen\\StHoriz.lua"
 			],
@@ -1080,10 +1309,6 @@
 			[
 				"ststop",
 				"roomgen\\StStop.lua"
-			],
-			[
-				"modactive",
-				"modules\\ModActive.lua"
 			],
 			[
 				"drawa",
@@ -1296,290 +1521,6 @@
 			[
 				"modreti",
 				"modules\\ModReticle.lua"
-			],
-			[
-				"modtarget",
-				"modules\\ModTargeter.lua"
-			],
-			[
-				"modtar",
-				"modules\\ModTargetable.lua"
-			],
-			[
-				"modene",
-				"modules\\ModEnemy.lua"
-			],
-			[
-				"objene",
-				"objects\\ObjEnemy.lua"
-			],
-			[
-				"modcontr",
-				"modules\\ModControllable.lua"
-			],
-			[
-				"modshoot",
-				"modules\\ModShooter.lua"
-			],
-			[
-				"modtargeteq",
-				"modules\\ModTargetEqp.lua"
-			],
-			[
-				"moddraw",
-				"modules\\ModDrawable.lua"
-			],
-			[
-				"objshot",
-				"objects\\ObjShot.lua"
-			],
-			[
-				"modproj",
-				"modules\\ModProjectile.lua"
-			],
-			[
-				"modshooter",
-				"modules\\ModShooter.lua"
-			],
-			[
-				"modproje",
-				"modules\\ModProjectileEnemy.lua"
-			],
-			[
-				"objd",
-				"objects\\ObjDamageHitbox.lua"
-			],
-			[
-				"draw",
-				"modules\\ModDrawable.lua"
-			],
-			[
-				"modpr",
-				"modules\\ModProjectile.lua"
-			],
-			[
-				"modta",
-				"modules\\ModTargetEqp.lua"
-			],
-			[
-				"modenem",
-				"modules\\ModEnemy.lua"
-			],
-			[
-				"projec",
-				"modules\\ModProjectileEnemy.lua"
-			],
-			[
-				"modac",
-				"modules\\ModCharacterDetector.lua"
-			],
-			[
-				"modch",
-				"modules\\ModCharacter.lua"
-			],
-			[
-				"modprojectile",
-				"modules\\ModProjectile.lua"
-			],
-			[
-				"modacti",
-				"modules\\ModActive.lua"
-			],
-			[
-				"targeter",
-				"modules\\ModTargeter.lua"
-			],
-			[
-				"target",
-				"modules\\ModTargeter.lua"
-			],
-			[
-				"objch",
-				"objects\\ObjChar.lua"
-			],
-			[
-				"pathfi",
-				"modules\\ModPathFinder.lua"
-			],
-			[
-				"extra",
-				"extra.lua"
-			],
-			[
-				"modtarg",
-				"modules\\ModTargeter.lua"
-			],
-			[
-				"modchar",
-				"modules\\ModCharacter.lua"
-			],
-			[
-				"path",
-				"modules\\ModPathFinder.lua"
-			],
-			[
-				"objcha",
-				"objects\\ObjChar.lua"
-			],
-			[
-				"modtarger",
-				"modules\\ModTargeter.lua"
-			],
-			[
-				"sprshot",
-				"assets\\spr\\scripts\\SprShot.lua"
-			],
-			[
-				"spren",
-				"assets\\spr\\scripts\\SprEnShot.lua"
-			],
-			[
-				"modtargeteqp",
-				"modules\\ModTargetEqp.lua"
-			],
-			[
-				"eqph",
-				"objects\\EqpHandgun.lua"
-			],
-			[
-				"modcontrollable",
-				"modules\\ModControllable.lua"
-			],
-			[
-				"controll",
-				"modules\\ModControllable.lua"
-			],
-			[
-				"modequ",
-				"modules\\ModEquippable.lua"
-			],
-			[
-				"modinven",
-				"modules\\ModInventory.lua"
-			],
-			[
-				"modinv",
-				"modules\\ModInventory.lua"
-			],
-			[
-				"modchara",
-				"modules\\ModCharacter.lua"
-			],
-			[
-				"objchar",
-				"objects\\ObjChar.lua"
-			],
-			[
-				"util",
-				"util.lua"
-			],
-			[
-				"settingm",
-				"SettingManager.lua"
-			],
-			[
-				"targetr",
-				"modules\\ModTargeter.lua"
-			],
-			[
-				"fxshot",
-				"objects\\FXShot.lua"
-			],
-			[
-				"mgame",
-				"MGame.lua"
-			],
-			[
-				"extr",
-				"extra.lua"
-			],
-			[
-				"moddrawable",
-				"modules\\ModDrawable.lua"
-			],
-			[
-				"objbaseunit",
-				"objects\\ObjBaseUnit.lua"
-			],
-			[
-				"objcrate",
-				"objects\\ObjCrate.lua"
-			],
-			[
-				"sprhathe",
-				"assets\\spr\\scripts\\SprHatHelmet.lua"
-			],
-			[
-				"sprcrate",
-				"assets\\spr\\scripts\\SprCrate.lua"
-			],
-			[
-				"modpartem",
-				"modules\\ModPartEmitter.lua"
-			],
-			[
-				"modphy",
-				"modules\\ModPhysics.lua"
-			],
-			[
-				"ser",
-				"libs\\ser.lua"
-			],
-			[
-				"contr",
-				"modules\\ModControllable.lua"
-			],
-			[
-				"moddrawab",
-				"modules\\ModDrawable.lua"
-			],
-			[
-				"objroomch",
-				"objects\\ObjRoomChanger.lua"
-			],
-			[
-				"roomch",
-				"modules\\ModRoomChanger.lua"
-			],
-			[
-				"speedzo",
-				"modules\\ModSpeedZone.lua"
-			],
-			[
-				"modcharacter",
-				"modules\\ModCharacter.lua"
-			],
-			[
-				"objhand",
-				"objects\\EqpHandgun.lua"
-			],
-			[
-				"aisurv",
-				"ai\\AISurvival.lua"
-			],
-			[
-				"infopis",
-				"ai\\info\\InfoPistols.lua"
-			],
-			[
-				"modcharac",
-				"modules\\ModCharacter.lua"
-			],
-			[
-				"ai",
-				"assets\\ai\\AIAlliance.lua"
-			],
-			[
-				"objbase",
-				"ObjBase.lua"
-			],
-			[
-				"xl",
-				"xl\\Lights.lua"
-			],
-			[
-				"aisur",
-				"ai\\AISurvival.lua"
 			]
 		],
 		"width": 0.0

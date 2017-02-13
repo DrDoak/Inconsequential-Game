@@ -50,9 +50,7 @@ local function embelishFunct(roomgen, struct)
 	if sType == "StVert" then
 		struct:fillBackground("wall")
 	end
-	lume.trace("HQO")
 	if sType ~= "StVert" and sType ~= "StPredef" and sType ~= "StCornerHV" and sType ~= "StCeil" and sType ~= "ExBottom" then
-		lume.trace("ww")
 		struct:addBackWall("baseBoard")
 	end
 end
